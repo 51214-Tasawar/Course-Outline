@@ -12,7 +12,13 @@
       var eng = prompt("Enter The Marks of eng ");
       var bio = prompt("Enter The Marks of Bio ");
      totalMarks = Math + urdu + eng + bio ;
-     percentage = 
+     percentage = (totalMarks /4 ) * 100 ;
+     if(percentage > 50){
+        document.write(`Congrulation our Marks are ${totalMarks} and your percentage is ${percentage}`)
+     }else{
+        document.write(`Soory our Marks are ${totalMarks} and your percentage is ${percentage}`)
+
+     }
 
     </script>
 </body>
