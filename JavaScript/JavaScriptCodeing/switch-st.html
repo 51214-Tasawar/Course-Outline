@@ -7,7 +7,7 @@
 </head>
 <body>
     <script>
-        var month = prompt("Enter Month ");
+        var month = parseInt(prompt("Enter Month "));
         switch(month){
             case 1 : 
             document.write("This Is Month of Jan");
@@ -46,9 +46,13 @@
             document.write("This Is Month of Dec");
             break ;
             default : 
-            document.write("Invalid Input : ")
+            document.write("Enter Valid Value : ")
             break;
         }
+        document.write("<br>")
+     var b =(month>=3 && month <=9 ?"Hot Session ": c=(month == 10 ||month == 11 ||month == 12 
+        ||month == 1 ||month == 2  )?"cold Session":"Invalid Choice ") ;
+     document.write(b);
     </script>
 </body>
 </html>
