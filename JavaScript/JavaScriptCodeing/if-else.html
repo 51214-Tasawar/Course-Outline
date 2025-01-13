@@ -7,12 +7,12 @@
 </head>
 <body>
     <script>
-      var Math = prompt("Enter The Marks of Math ");
-      var urdu = prompt("Enter The Marks of urdu ");
-      var eng = prompt("Enter The Marks of eng ");
-      var bio = prompt("Enter The Marks of Bio ");
-     totalMarks = Math + urdu + eng + bio ;
-     percentage = (totalMarks /4 ) * 100 ;
+      var Math = parseInt(prompt("Enter The Marks of Math "));
+      var urdu = parseInt(prompt("Enter The Marks of urdu "));
+      var eng = parseInt(prompt("Enter The Marks of eng "));
+      var bio = parseInt(prompt("Enter The Marks of Bio "));
+    var totalMarks = Math + urdu + eng + bio ;
+    var  percentage = (totalMarks /400) * 100 ;
      if(percentage > 50){
         document.write(`Congrulation our Marks are ${totalMarks} and your percentage is ${percentage}`)
      }else{
