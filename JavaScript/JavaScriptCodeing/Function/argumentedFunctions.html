@@ -7,17 +7,26 @@
 </head>
 <body>
     <script>
-        var  a = prompt("Enter Your Name : ");
-        var b = prompt("Enter Your Id : ")
-        var c = prompt("Enter Your address : ");
+        // var  a = prompt("Enter Your Name : ");
+        // var b = prompt("Enter Your Id : ") ;
+        // var c = prompt("Enter Your address : ");
+        // function Info(name , id , address ){  //Here name , id  and address are the parameter 
+        //  document.write(`Employee Name is :  ${name} <br>`);
+        //  document.write(`Employee Id is :  ${id} <br>`);
+        //  document.write(`Employee City is :  ${address}`);
+        // }
+        // Info(a , b, c); // Here a,b and c are the arguments 
 
-        function Info(name , id , address ){
-         document.write(`Employee Name is :  ${name} <br>`);
-         document.write(`Employee Id is :  ${id} <br>`);
-         document.write(`Employee City is :  ${address}`);
-        }
+        // Function having Default Parameter  .
+         function Student(name="New Student " , id = "1211", address="Pakistan" ){
+            
+             document.write(`Employee Name is :  ${name} <br>`);
+             document.write(`Employee Id is :  ${id} <br>`);
+             document.write(`Employee City is :  ${address}`);
 
-        Info(a , b, c);
+         }
+     Student(a , b, c);
+
     </script>
 </body>
 </html>
