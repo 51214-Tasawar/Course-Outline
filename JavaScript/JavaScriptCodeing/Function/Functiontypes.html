@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const name = prompt("Enter Your Name : ");
+        const Id = prompt("Enter Your Id : ");
+        const desination = prompt("Enter Your desination : ");
+        const address = prompt("Enter Your address : "); 
+
+       const Organzation=(a , b)=>{
+              document.write(`Welcome ${a} to our Organization`)
+              document.write(`We Want giving the role of ${b} <br>`)
+       }
+       Organzation (name , desination) ;
+
+      const reg = function(c){
+        document.write(`Your Registration number in our organization is ${c} <br>`)
+      }
+      reg(Id) ;
+    
+    ( function(){
+     document.write(`Name is : ${name} <br> `);
+     document.write(`Id Number is : ${Id} <br> `);
+     document.write(`Having Position of ${desination} <br> `);
+     document.write(`Address is following : ${address} <br> `)
+    })();
+
+    </script>
+</body>
+</html>
