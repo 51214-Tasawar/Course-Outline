@@ -1,35 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 <body>
-    <script>
-        const name = prompt("Enter Your Name : ");
-        const Id = prompt("Enter Your Id : ");
-        const desination = prompt("Enter Your desination : ");
-        const address = prompt("Enter Your address : "); 
+  <script>
+    const name = prompt("Enter Your Name : ") ;
+    const age = prompt("Enter Your age : ") ;
+    const role = prompt("Enter Your role : ") ;
+    const desination = prompt("Enter Your Desination : ") ;
+    const address = prompt("Enter Your address : ") ;
+   document.write(`<b>Function Types</b> <br>`)
 
-       const Organzation=(a , b)=>{
-              document.write(`Welcome ${a} to our Organization`)
-              document.write(`We Want giving the role of ${b} <br>`)
-       }
-       Organzation (name , desination) ;
+  const BasicInfo=(a , b , add)=>{
+    document.write(`Employee name is :${a}`)
+    document.write(`Age is : ${b} `)
+    document.write(`Address : ${add} <br><br>`)
+  }
 
-      const reg = function(c){
-        document.write(`Your Registration number in our organization is ${c} <br>`)
-      }
-      reg(Id) ;
-    
-    ( function(){
-     document.write(`Name is : ${name} <br> `);
-     document.write(`Id Number is : ${Id} <br> `);
-     document.write(`Having Position of ${desination} <br> `);
-     document.write(`Address is following : ${address} <br> `)
-    })();
+  function Info(a , b ){
+    document.write(`Employee name is :${a} `)
+    document.write(`Age is : ${b} <br><br>`)
+  }
+  BasicInfo(name , age , address)
+  Info(name , age )
 
-    </script>
+  (function(){
+    document.write(`<b>IIFEFunction is Invoked </b><br>`)
+    document.write(`Employee name is :${name}<br>`)
+    document.write(`Age is : ${age} <br>`)
+    document.write(`Role is  : ${role} <br>`)
+    document.write(`desination is : ${desination}<br>`)
+    document.write(`Address : ${address} <br>`)
+  })();
+
+
+  </script>
 </body>
 </html>
