@@ -7,36 +7,34 @@
 </head>
 <body>
   <script>
-    const name = prompt("Enter Your Name : ") ;
-    const age = prompt("Enter Your age : ") ;
-    const role = prompt("Enter Your role : ") ;
-    const desination = prompt("Enter Your Desination : ") ;
-    const address = prompt("Enter Your address : ") ;
-   document.write(`<b>Function Types</b> <br>`)
+    const name = prompt("Enter name :");
+    const age = prompt("Enter Age : ");
+    const role = prompt("Enter role : ");
+    const desination = prompt("Enter desination : ");
+    const address = prompt("Enter address : ");
 
-  const BasicInfo=(a , b , add)=>{
-    document.write(`Employee name is :${a}`)
-    document.write(`Age is : ${b} `)
-    document.write(`Address : ${add} <br><br>`)
-  }
+    const BasicInfo=(name , age , address)=>{
+      document.write(`<b> Arrow Function Info </b>`)
+      document.write(`Name is : ${name} <br>`)
+      document.write(`age is : ${age} <br> `)
+      document.write(`address is : ${address} <br> `)
+    }
+    function Info(role , desination ){
+      document.write(`<b>Anonymous Function Info</b><br>`)
+      document.write(`role is : ${role} <br>`)
+      document.write(`desination is : ${desination} <br> `)
+    }
+    BasicInfo(name , age , address) ;
+    Info(role , desination);
 
-  function Info(a , b ){
-    document.write(`Employee name is :${a} `)
-    document.write(`Age is : ${b} <br><br>`)
-  }
-  BasicInfo(name , age , address)
-  Info(name , age )
-
-  (function(){
-    document.write(`<b>IIFEFunction is Invoked </b><br>`)
-    document.write(`Employee name is :${name}<br>`)
-    document.write(`Age is : ${age} <br>`)
-    document.write(`Role is  : ${role} <br>`)
-    document.write(`desination is : ${desination}<br>`)
-    document.write(`Address : ${address} <br>`)
-  })();
-
-
+    (function(){
+      document.write(`<b>IIFE Function Invoked</b><br>`)
+      document.write(`Name is : ${name} <br>`)
+      document.write(`age is : ${age} <br> `)
+      document.write(`address is : ${address} <br> `)
+      document.write(`role is : ${role} <br>`)
+      document.write(`desination is : ${desination} <br> `)
+    })();
   </script>
 </body>
 </html>
