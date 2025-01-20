@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function applyOperation(a, b, operation) {
+    return operation(a, b); // Calls the provided callback
+}
+const add = (x, y) => x + y;
+const multiply = (x, y) => x * y;
+document.write(applyOperation(5, 3, add));      // 8
+document.write(applyOperation(5, 3, multiply)); // 15
+
+    </script>
+
+</body>
+</html>
