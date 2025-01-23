@@ -7,9 +7,13 @@
 </head>
 <body>
     <script>
-        const arr = ["Tasawar","Ali","Khan","Naqi Khan","Inshal Khan","Naqi Khan","Naqi Khan","Tasawar"] ;
-        document.write(`${arr.indexOf("Naqi Khan")}`);
-        
+        const arr = [ 1,2,3,4,5,6,6,7,6,9,1,10];
+
+        document.write(`${arr.indexOf(6)}<br>`);
+        document.write(`${arr.lastIndexOf(6)}<br>`);
+        document.write(`${arr.includes(110)}<br>`);
+        document.write(`${arr.find( a => a==10)}<br>`);
+        document.write(`${arr.findIndex(a => a == 10)} <br>`);
     </script>
 </body>
 </html>
