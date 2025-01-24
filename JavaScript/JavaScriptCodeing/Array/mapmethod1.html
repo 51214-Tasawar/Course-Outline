@@ -11,7 +11,7 @@
         Factor : 2 
     }
        const arr = [1,2,3,4,5];
-       document.write(`${arr.map((x)=>{
+       document.write(`${arr.map(function(x){
         return x * this.Factor ;
        } , multiplier)}`)
     </script>
