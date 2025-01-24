@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 <body>
- <script>
-    const arr = [1,2,3,4,5];
-    document.write(`${arr.map((arr)=>{
-      arr * arr ;
-    })}`)
- </script>
+  <script>
+   const arr = [
+    {fname:"Naqi" , lname:"Buck"},
+    {fname:"Farhat" , lname:"Buck"},
+    {fname:"Skhawat" , lname:"Buck"},
+    {fname:"Inshal" , lname:"Buck"},
+    {fname:"Ali" , lname:"Buck"},
+    {fname:"Tasawar" , lname:"Buck"}
+   ];
+   const fullname = arr.map(x=>`Full Name is : ${x.fname}${x.lname} <br> `);
+   document.write(fullname);
+  </script>
 </body>
 </html>
