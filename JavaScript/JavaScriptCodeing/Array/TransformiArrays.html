@@ -15,8 +15,10 @@
     {fname:"Ali" , lname:"Buck"},
     {fname:"Tasawar" , lname:"Buck"}
    ];
-   const fullname = arr.map(x=>`Full Name is : ${x.fname}${x.lname} <br> `);
-   document.write(fullname);
-  </script>
+   const fullname = arr.map(( x , y ,arr )=>`Full Name is : ${x.fname}${x.lname}  `);
+  //  document.write(fullname);
+  const a = [1,2,3,4];
+  document.write(`${a.map(x=>x*x)}`)
+ </script>
 </body>
 </html>
