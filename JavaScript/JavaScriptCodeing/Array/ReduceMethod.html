@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 <body>
-    <script>
-        const Arr = [1,2,5,66,97,12,11,190];
-        const total = Arr.reduce((acc , num)=>{
-          return acc + num ;
-        }) ;
-        const maxNum = Arr.reduce((acc , num)=>{
-          return Math.max(acc , num );
-        }) ;
-        const minNum = Arr.reduce((acc , num)=>{
-          return Math.min(acc , num) ;
-        }) ;
-        document.write(`Total of Array Element is ${total} <br> Maximun Number in Array is ${maxNum}<br>
-        Minimum Number in Array is ${minNum}`);
-    </script>
+  <script>
+    const text = "Hello"
+    const arr = [1,2,3,4,5,6,7,8,9,10];
+    const total = arr.reduce((acc , val)=>{
+         return acc + val ;
+    })
+    const maxNum = arr.reduce((acc , val)=>{
+        return Math.max(acc ,val) ;
+    })
+    const minNum = arr.reduce((acc , val)=>{
+       return Math.min(acc ,val) ;
+    })
+    document.write(`Total Number is ${total} <br> MaxImum Number is ${maxNum} <br> MiniMum Number is ${minNum}<br>`)
+
+    const names = ["Student1" , "Student2" , "Student3" , "Student4"] ;
+       const name =names.reduceRight(( name , text )=>{
+          return (name , text) ;
+       })
+   document.write(name);
+  </script>
 </body>
 </html>
