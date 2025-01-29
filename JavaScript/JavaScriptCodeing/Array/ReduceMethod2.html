@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const Name = [' T' ,'a','s','a','w','a','r'] ;
+        const fullName = Name.reduce((acc , Val)=>{
+                  return acc + Val ;
+        })
+        document.write(fullName);
+        const reverseName = Name.reduceRight((acc , Val)=>{
+               return acc + Val ;
+        })
+        document.write(`Full Name is <b><u> ${fullName}</u></b> <br>`);
+        document.write(`Full Name is ${reverseName}`);
+    </script>
+</body>
+</html>
