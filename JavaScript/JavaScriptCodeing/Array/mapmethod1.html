@@ -7,13 +7,17 @@
 </head>
 <body>
     <script>
-       const multiplier ={
-        Factor : 2 
-    }
-       const arr = [1,2,3,4,5];
-       document.write(`${arr.map(function(x){
-        return x * this.Factor ;
-       } , multiplier)}`)
+    //    const multiplier ={
+    //     Factor : 2 
+    // }
+    //    const arr = [1,2,3,4,5];
+    //    document.write(`${arr.map(function(x){
+    //     return x * this.Factor ;
+    //    } , multiplier)}`)
+    const students = ['Studetn1' , 'Studetn2' ,'Studetn3' ,'Studetn4' , 'Studetn5'] ;
+   const names = students.map(name=>name) ;
+   document.write(names);
+    
     </script>
 </body>
 </html>
