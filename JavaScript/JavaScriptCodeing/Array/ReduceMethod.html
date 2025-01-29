@@ -7,11 +7,18 @@
 </head>
 <body>
     <script>
-        const Arr = [1,3,5,6,7,9,10,12,15];
-        const num = Arr.reduce((acc , int)=>{
-     return acc + int ;
-        })
-        document.write(num);
+        const Arr = [1,2,5,66,97,12,11,190];
+        const total = Arr.reduce((acc , num)=>{
+          return acc + num ;
+        }) ;
+        const maxNum = Arr.reduce((acc , num)=>{
+          return Math.max(acc , num );
+        }) ;
+        const minNum = Arr.reduce((acc , num)=>{
+          return Math.min(acc , num) ;
+        }) ;
+        document.write(`Total of Array Element is ${total} <br> Maximun Number in Array is ${maxNum}<br>
+        Minimum Number in Array is ${minNum}`);
     </script>
 </body>
 </html>
