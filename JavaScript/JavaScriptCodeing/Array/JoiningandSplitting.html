@@ -8,7 +8,7 @@
 <body>
     <script>
      const students =["Student1","Student2", "Student3", "Student4", "Student5", "Student6" ,[1,2,3,4,[101 ,102 ,103,105]]] ;
-     const newStudent = students.flat().flat().join("---->");
+     const newStudent = students.flat(2).join("---->");
       document.write(newStudent+"<br>");
 
        // tostring() method work also same as join but there is no need of 
