@@ -7,9 +7,14 @@
 </head>
 <body>
     <script>
-     const students =["Student1","Student2", "Student1]3", "Student4", "Student5", "Student6" ,[1,2,3,4,[101 ,102 ,103,105]]] ;
-     const newStudent = students.flat().flat().join("-->");
-      document.write(newStudent);
+     const students =["Student1","Student2", "Student3", "Student4", "Student5", "Student6" ,[1,2,3,4,[101 ,102 ,103,105]]] ;
+     const newStudent = students.flat().flat().join("---->");
+      document.write(newStudent+"<br>");
+
+       // tostring() method work also same as join but there is no need of 
+       // string seperator for this .
+       const data = students.toString();
+       document.write(data) 
     </script>
 </body>
 </html>
