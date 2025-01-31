@@ -4,10 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .div{
+            display: flex ;
+            align-content: flex-start;
+            background-color: red;
+            color: white;
+            width: 50px;
+            height: 50;
+            border: 5px;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
     <script>
         const arr = [1,11,110,12,13,14,15,114,110,112 ,110,12,1];
+        const Students = ["Ali","Hassan" , "Skhawat" ,"javid" , "Yasir"];
         // arr.pop() // remove element from the last index of array 
         // // document.write(arr);
         // arr.push(112); // insert new element at the last index 
@@ -17,18 +30,21 @@
         // arr.unshift(1) // Inserting Element at The Frist Index of array
         // document.write(arr);
     // Finding Elements
-   
-    const arr1 =arr.indexOf(110); // find specific element from frist index 
-    const arr2 = arr.lastIndexOf(110); // find specific element from last index 
-   document.write(arr1 , "<br>")
-   document.write(arr2 , "<br>")
-   document.write(`${arr.includes(13)} <br>`); // Check whather the element is part of array or not 
-   const  a = arr.find(x=> x % 2 == 0); // Return frist element which fullfill the condition
-   document.write(a , "<br>");
-   const b = arr.findIndex((x)=>{ // Return frist index element which fullfill the condition
-   return x % 2 == 0 ;
-   })
-   document.write(b);
+//     const arr1 =arr.indexOf(110); // find specific element from frist index 
+//     const arr2 = arr.lastIndexOf(110); // find specific element from last index 
+//    document.write(arr1 , "<br>")
+//    document.write(arr2 , "<br>")
+//    document.write(`${arr.includes(13)} <br>`); // Check whather the element is part of array or not 
+//    const  a = arr.find(x=> x % 2 == 0); // Return frist element which fullfill the condition
+//    document.write(a , "<br>");
+//    const b = arr.findIndex((x)=>{ // Return frist index element which fullfill the condition
+//    return x % 2 == 0 ;
+//    })
+//    document.write(b);
+     const St1 = Students.map((x)=> 
+    `<div class="div"><b><i> ${x}</i></b></div>`
+     );
+     document.write(St1)
     </script>
 </body>
 </html>
