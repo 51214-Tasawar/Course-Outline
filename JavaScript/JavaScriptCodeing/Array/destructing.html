@@ -8,9 +8,10 @@
 <body>
     <script>
           const arr = ["Ahmad" , "Qaiser" ,"Abbas" ,"Muhammad" ,"Khalid"];
-          const [st1 ,st2] = arr ;
+          const [st1 ,st2 , ...allStudent] = arr ;
           document.write(st1 , "<br>") ;
-          document.write(st2) ;
+          document.write(st2, "<br>") ;
+          document.write(allStudent);
     </script>
 </body>
 </html>
