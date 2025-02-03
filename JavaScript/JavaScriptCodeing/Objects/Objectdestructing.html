@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const person = {
+            pname :"NewPerson" ,
+            age : 30 ,
+            address : "Multan"
+        }
+        const { pname } = person ; // Destructuring of Object
+        document.write(`${pname}<br><br><br>`);
+      const student = {
+            name : "Employee1" ,
+            id: 101 ,
+            address : {
+                city:"Muzaffargarh",
+                provinance:"Punjab" ,
+                country : "Pakistan"
+            } ,
+            desination : " Full Stack Developer "    
+        }
+        // Destructuring of nested Object
+        const {name , id , desination , address : {city, provinance , country}} = student; 
+        document.write(`${city}<br><br>`)
+
+        const animal = {
+         Aname : "Lion" ,
+         color: "brown" ,
+         age : 12 ,
+         price : 120000  
+        }
+        const{Aname , ...Info} =animal
+        document.write(`${Info.price}`)
+    </script>
+</body>
+</html>
