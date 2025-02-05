@@ -7,35 +7,14 @@
 </head>
 <body>
     <script>
-        const person = {
-            pname :"NewPerson" ,
-            age : 30 ,
-            address : "Multan"
+        function student(name , age , address ){
+       this.name = name ;
+       this.age = age ;
+       this.address = address;
         }
-        const { pname } = person ; // Destructuring of Object
-        document.write(`${pname}<br><br><br>`);
-      const student = {
-            name : "Employee1" ,
-            id: 101 ,
-            address : {
-                city:"Muzaffargarh",
-                provinance:"Punjab" ,
-                country : "Pakistan"
-            } ,
-            desination : " Full Stack Developer "    
-        }
-        // Destructuring of nested Object
-        const {name , id , desination , address : {city, provinance , country}} = student; 
-        document.write(`${city}<br><br>`)
-
-        const animal = {
-         Aname : "Lion" ,
-         color: "brown" ,
-         age : 12 ,
-         price : 120000  
-        }
-        const{Aname , ...Info} =animal
-        document.write(`${Info.price}`)
+        st1 = new student("Ali Maysa" , 12 , " MuzaffarGarh Punjab Pakistan ");
+        document.write(`<b>Student Info Is : </b><br> <b>Name : </b> ${st1.name}<br> <b>Age : </b> ${st1.age} 
+        <br> <b>Address : </b> ${st1.address} `)
     </script>
 </body>
 </html>
