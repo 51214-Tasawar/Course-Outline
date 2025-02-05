@@ -1,30 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script>
-        // const Number = parseInt(prompt("Enter Number For Table"));
-        // for( let i = 0 ; i<=10; i++){
-        //     document.write(`${Number} * ${i} = ${Number * i} <br>`);
-        // }
-        // let i = 0 ;
-        // while(i<=10){
-        //     document.write( i,"---  Hello Pakistan Champion Trophy <br>")
-        //     i++ ;
-        // }
-        let i = 0 ;
-       const num = parseInt(prompt("Enter Number value"));
-       do{
-         document.write(`${num} *${i} = ${num * i }<br>`)
-         i++ ;
-       }while(i<=10) ;
-
-       
-
-    </script>
-</body>
-</html>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+        // const vehicles = ["Toyota Corolla" , "BMW" , "Mercedes" , "Rangrover" , "Audi" , "Hondyi"] ; 
+        //     for(var i = 0 ; i < vehicles.length; i++){  // For Loop Over The Array ;
+        //         document.write(`No . ${i} Vehicle Name is : ${vehicles[i]}<br>`);
+        //  }
+        // const num = parseInt(prompt("Enter Number")) ;
+        // var i = 0 ;
+        // while(i<=10) { // While Loop 
+        //     document.write(`<b>${num} * ${i} = ${num*i}</b><br>`)
+        //     i++;
+        // } 
+        const NewObject = {
+            st1 : "Stdudent 1",
+            st2 : "Stdudent 2",
+            st3 : "Stdudent 3",
+            st4 : "Stdudent 4",
+            st5 : "Stdudent 5",
+            st6 : "Stdudent 6",
+        }
+        const array = Object.keys(NewObject);
+        for (var i=0; i< array.length ; i++){
+            const keys = array[i];
+            const values = NewObject[keys];
+            document.write(`${keys} : ${values} <br>`)
+        }
+        </script>
+    </body>
+    </html>

@@ -7,14 +7,28 @@
 </head>
 <body>
     <script>
-        function student(name , age , address ){
-       this.name = name ;
-       this.age = age ;
-       this.address = address;
-        }
-        st1 = new student("Ali Maysa" , 12 , " MuzaffarGarh Punjab Pakistan ");
-        document.write(`<b>Student Info Is : </b><br> <b>Name : </b> ${st1.name}<br> <b>Age : </b> ${st1.age} 
-        <br> <b>Address : </b> ${st1.address} `)
+    //     function student(name , age , address ){ Creating The Functional Object
+    //    this.name = name ;
+    //    this.age = age ;
+    //    this.address = address;
+    //     }
+    //     st1 = new student("Ali Maysa" , 12 , " MuzaffarGarh Punjab Pakistan ");
+    //     document.write(`<b>Student Info Is : </b><br> <b>Name : </b> ${st1.name}<br> <b>Age : </b> ${st1.age} 
+    //     <br> <b>Address : </b> ${st1.address} `)
+       const Info = {
+        name : "Emp1" ,
+        age : 20  ,
+         role : " Full Stack Developer ",
+         desination : "Junior Developer" ,
+         address :{
+            city : "Muzaffargarh" ,
+            provinance : "Punjab " ,
+            country : "Pakistan"
+         }
+       }
+       const {name , age , ...address } = Info ; // Destructring Of Object Performed 
+       document.write(`Name is : ${name} <br> Age is : ${age} <br> Country : ${address.address.country}`) ;
+       
     </script>
 </body>
 </html>
