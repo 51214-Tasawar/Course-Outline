@@ -17,20 +17,29 @@
         //     document.write(`<b>${num} * ${i} = ${num*i}</b><br>`)
         //     i++;
         // } 
-        const NewObject = {
-            st1 : "Stdudent 1",
-            st2 : "Stdudent 2",
-            st3 : "Stdudent 3",
-            st4 : "Stdudent 4",
-            st5 : "Stdudent 5",
-            st6 : "Stdudent 6",
+       const Employee ={
+        name : "Employee 1" ,
+        age  :  30 ,
+        role : "Full Stack Developer",
+        desination : "Junior Developer",
+        address : {
+            city :"MuzaffarGarh",
+            provinance: "Punjab" ,
+            country : "Pakistan"
+        } 
+       }
+       const keys = Object.keys(Employee);
+      for(var i=0; i<keys.length; i++){
+        const key = keys[i];
+        const values = Employee[key];
+        if(typeof values === "object"){
+            document.write(`${key} : ${JSON.stringify(values)}<br>`);
         }
-        const array = Object.keys(NewObject);
-        for (var i=0; i< array.length ; i++){
-            const keys = array[i];
-            const values = NewObject[keys];
-            document.write(`${keys} : ${values} <br>`)
+        else{
+            document.write(`${key} : ${values}<br>`)
         }
+      }
+
         </script>
     </body>
     </html>
