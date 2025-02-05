@@ -13,6 +13,29 @@
             document.write(`<b>${array[i]}</b><br>`)
             i++;
         }
+        const Employee ={
+        name : "Employee 1" ,
+        age  :  30 ,
+        role : "Full Stack Developer",
+        desination : "Junior Developer",
+        address : {
+            city :"MuzaffarGarh",
+            provinance: "Punjab" ,
+            country : "Pakistan"
+        } 
+       }
+       const keys = Object.keys(Employee);
+       var i = 0 ;
+       do{
+           const key = keys[i];
+           const values = Employee[key];
+           if(typeof values==="object"){
+            document.write(`${key} : ${JSON.stringify(values)}<br>`)
+           }else{
+            document.write(`${key} : ${values}<br>`);
+           }
+           i++ ;
+       }while(i<keys.length);
     </script>
 </body>
 </html>
