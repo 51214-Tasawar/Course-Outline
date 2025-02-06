@@ -20,8 +20,11 @@
           }
         }
         for(var key in Student){
-            if(typeof Student(key) === "object"){
-                document.write(`${key} : ${Student.to()}`)
+            if(typeof Student[key] === "object"){
+                document.write(`${key} : ${JSON.stringify(Student)}`)
+            }
+            else{
+                document.write(`${key} : ${Student[key]}<br>`);
             }
         }
     </script>
