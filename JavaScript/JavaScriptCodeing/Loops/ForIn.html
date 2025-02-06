@@ -13,7 +13,16 @@
             age  : 19  ,
           Rollno :  1011 ,
           Degree : "Bscs" ,
-          address:{}
+          address:{
+            city : "Muzaffargarh",
+            provinance:"Punjab" ,
+            country : "Pakistan"
+          }
+        }
+        for(var key in Student){
+            if(typeof Student(key) === "object"){
+                document.write(`${key} : ${Student.to()}`)
+            }
         }
     </script>
 
