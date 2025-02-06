@@ -6,28 +6,26 @@
     <title>Document</title>
 </head>
 <body>
-    
     <script>
         const Student = {
-            name : "Ahmad" ,
-            age  : 19  ,
-          Rollno :  1011 ,
-          Degree : "Bscs" ,
-          address:{
-            city : "Muzaffargarh",
-            provinance:"Punjab" ,
-            country : "Pakistan"
-          }
+            name : "Ali Imran " ,
+            age : 22 ,
+            address :{
+                 city : "Muzaffargarh" ,
+                 provinance : "Punjab" ,
+                 Country: "Pakistan" ,
+            } ,
+            role : "Full Stack Development" ,
+            desination :"Manager"
         }
-        for(var key in Student){
+        for(let key in Student){
             if(typeof Student[key] === "object"){
-                document.write(`${key} : ${JSON.stringify(Student)}`)
+          document.write(`${key} : ${JSON.stringify(Student[key])}<br>`)
             }
             else{
-                document.write(`${key} : ${Student[key]}<br>`);
+                document.write(`${key} : ${Student[key]} <br> `);
             }
         }
     </script>
-
 </body>
 </html>
