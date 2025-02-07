@@ -7,10 +7,33 @@
 </head>
 <body>
     <script>
-        const name = "Tasawar";
-        for(let key of name){
-          document.write(`${key} <br>`);
-        }
+//    const name  = "Student1";
+//    for(let i of name){ // Iterating Loop Over Variable
+//     document.write(`${i}<br>`)
+//    }
+ 
+//    const array = [1,2,3,4,"Null" , ,"String"]; //Over The Array
+//    for(let key of array){
+//     document.write(`${key} <br>`)
+//    }
+   const Emp = {
+    name : "New Employee",
+    age : 45 ,
+    address : {
+        city:"Muzaffargarh",
+        provinance: "punjab",
+        country:"Pakistan",
+        region:"Asia"
+    }
+   }
+   for(let key in Emp){ // For of loop not work for objects 
+    if(typeof Emp[key]==="object"){
+        document.write(`${key}  : ${JSON.stringify(Emp[key])}<br>`);
+    }
+    else{
+        document.write(`${key}  : ${Emp[key]}`)
+    }
+   }
     </script>
 </body>
 </html>
