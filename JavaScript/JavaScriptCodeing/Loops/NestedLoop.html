@@ -7,12 +7,41 @@
 </head>
 <body>
     <script>
-        for(let i = 0 ; i<10 ; i++){
-            for(let j=0; j<i; j++){
-                document.write(`${i} : ${j}<br>`)
-            }
+        for(let i = 0 ; i<=5; i++){
+            let j = 0 ;
+           while(j<=i){
+         document.write(`Inner${j} : Outer ${i} <br>`)
+         j++;
+           }
             document.write(`<br>`)
         }
+        const obj1 = {
+            type : "Vehicle",
+            name: "car",
+            color:"White",
+            veriations:{
+                seats : 4 ,
+                airbag :"Having four Air bags" ,
+                engNo : "1E-211"
+            }
+        }
+        const  i = Object.keys(obj1);
+        for(let j=0; j<i.length; j++){
+            const keys = i[j];
+            const values = obj1[keys]
+            if(typeof values ==="object"){
+                const x = Object.keys(values);
+                for(let y=0; y<x.length; y++){
+                    const key = x[y];
+                    const myValues = values[key]
+                    document.write(`${key} : ${myValues} <br>`)
+                }
+            }
+            else{
+                document.write(`${keys} : ${values}<br>`)
+            }
+        }
+
     </script>
 </body>
 </html>
