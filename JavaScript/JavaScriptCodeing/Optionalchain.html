@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const obj = {
+            obj     : "Bank" ,
+            objname : "United Bank Limited" ,
+            test (){
+                document.write(`Hello World This is Testing Demo <br>`)
+            } ,
+            accInfo :{
+                accNo : "89471983900",
+                acchname :"Mumtaz Khan",
+                add:{
+                    city :"Muzaffargarh",
+                    provinance: "Punjab" ,
+                    country : "Pakistan" ,
+                    region : "Asia"
+                }
+            }
+        }
+        // document.write(obj.accInfo.address?.land ??" This property does not exist ");
+        document.write(`${obj.test?.()}`) // It also Give undefined at the end of output because of document.write
+        // For Function Calling 
+    </script>
+</body>
+</html>
