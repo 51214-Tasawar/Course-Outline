@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .Outer{
+            color: red;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
 </head>
 <body>
     <script>
@@ -25,22 +31,22 @@
                 engNo : "1E-211"
             }
         }
-        const  i = Object.keys(obj1);
-        for(let j=0; j<i.length; j++){
-            const keys = i[j];
-            const values = obj1[keys]
-            if(typeof values ==="object"){
-                const x = Object.keys(values);
-                for(let y=0; y<x.length; y++){
-                    const key = x[y];
-                    const myValues = values[key]
-                    document.write(`${key} : ${myValues} <br>`)
-                }
-            }
-            else{
-                document.write(`${keys} : ${values}<br>`)
+    const keys = Object.keys(obj1);
+    for(let i=0; i<keys.length; i++){
+        const nkey = keys[i];
+        const values = obj1[nkey];
+        if(typeof values ==="object" ){
+            const newkey = Object.keys(values);
+            for(let j=0; j<newkey.length; j++){
+                const mykey = newkey[j];
+                const myval = values[mykey];
+                document.write(`<b>${mykey} : ${myval}</b> <br>`)
             }
         }
+        else{
+            document.write(`<div class = "Outer"><b>${nkey} : ${values}</b></div><br>`)
+        }
+    }
 
     </script>
 </body>
