@@ -8,8 +8,13 @@
 <body>
     <script>
         const obj = {
-            
+          name : "Developer",
+          age : 24 ,
+          Hello : function (){
+          document.write(`Hello World This Is from ${this.name}  to test program  ... <br> `)
+          }  
         }
+       obj.Hello();
     </script>
 </body>
 </html>
