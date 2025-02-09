@@ -7,19 +7,25 @@
 </head>
 <body>
     <script>
-      const student = {
-        name : "New Student",
-        age  : 20 ,
-        address : "Multan" ,
-        Section : 'A'  ,
-        class : "Semester 8 ",
-        Info : function(){
-     document.write(`Student Name : ${this.name}<br>Age is : ${this.age}<br>  Class and Section is :
-      ${this.class }-${this.Section}<br> Address Is  :${this.address}`)
-        }
-      }
-      student.Info();
-  
+     // const student ={
+    //     name : "New Student",
+    //     age  : 20 ,
+    //     address : "Multan" ,
+    //     Section : 'A'  ,
+    //     class : "Semester 8 ",
+    //     Info : function(){
+    //  document.write(`Student Name : ${this.name}<br>Age is : ${this.age}<br>  Class and Section is :
+    //   ${this.class }-${this.Section}<br> Address Is  :${this.address}`)
+    //     }
+    //   }
+    //   student.Info();
+         function Student(name , age , address) {
+                  this.name = name ;
+                  this.age = age ;
+                  this.address = address ;
+                } 
+               const Student1 = new Student("Student-1" , 20 , "Muzaffargarh") ;
+               document.write(`Student Name  : ${Student1.name}`)
     </script>
 </body>
 </html>
