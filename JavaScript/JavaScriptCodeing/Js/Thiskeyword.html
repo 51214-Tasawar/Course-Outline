@@ -7,14 +7,19 @@
 </head>
 <body>
     <script>
-        const obj = {
-          name : "Developer",
-          age : 24 ,
-          Hello : function (){
-          document.write(`Hello World This Is from ${this.name}  to test program  ... <br> `)
-          }  
+      const student = {
+        name : "New Student",
+        age  : 20 ,
+        address : "Multan" ,
+        Section : 'A'  ,
+        class : "Semester 8 ",
+        Info : function(){
+     document.write(`Student Name : ${this.name}<br>Age is : ${this.age}<br>  Class and Section is :
+      ${this.class }-${this.Section}<br> Address Is  :${this.address}`)
         }
-       obj.Hello();
+      }
+      student.Info();
+  
     </script>
 </body>
 </html>
