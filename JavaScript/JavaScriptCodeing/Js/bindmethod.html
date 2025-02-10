@@ -7,29 +7,31 @@
 </head>
 <body>
     <script>
-        //  call, apply, bind methods are used to assign object to this keyword  
-      const Name = {
-        fullName : function(){
-            return  this.Fname+" "+this.Lname ;
-        }
-      }
-
-    const Person1 = {
-        Fname : "Ali " ,
-        Lname : "Imran"
+    //     const Name = {
+    //     fullName : function(){
+    //         return this.Fname + " " + this.Lname ; 
+    //     }
+    //  }
+    //  const person1 ={
+    //        Fname : "Shokat",
+    //        Lname : "Abbas"
+    //  }
+    //  const person2 ={
+    //        Fname : "Ali",
+    //        Lname : "Imran"
+    //  }
+    //  const person3 ={
+    //        Fname : "Wafadar",
+    //        Lname : "Ghazi"
+    //  }
+    //  document.write(`${Name.fullName.call(person2)}`)
+    const Obj1 = {
+        name : "Ali"
     } 
-    const Person2 = {
-        Fname : "Shoukat " ,
-        Lname : "Abbas"
+    const Newfun = function(a , b){
+        return `${a} ${this.name}  ${b}`
     }
-    const Person3 = {
-        Fname : "Wafadar " ,
-        Lname : "Ghazi"
-    }
- document.write(`${Name.fullName.call(Person3)}`);
- const newcode = {
-    nam1:"Testing Demo"
- }
+    document.write(`${Newfun.call(Obj1 , "Hello" , "This is JavaScript Practice ")}`) ;
     </script>
 </body>
 </html>
