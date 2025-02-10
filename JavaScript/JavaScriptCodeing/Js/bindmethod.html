@@ -8,24 +8,25 @@
 <body>
     <script>
         //  call, apply, bind methods are used to assign object to this keyword  
-       const Name = {
-      fullname : function(){
-        return this.fname + " " + lname ;
+      const Name = {
+        fullName : function(){
+            return  this.Fname+" "+this.Lname ;
+        }
       }
-       }
-    const person1 = {
-        fname : " Ahmad " ,
-        lname : " Raza " 
-    }
-    const person2 = {
-        fname : " Skhawat " ,
-        lname : " Ali " 
-    }
-    const person3 = {
-        fname : " Ali " ,
-        lname : " Maysa " 
+
+    const Person1 = {
+        Fname : "Ali " ,
+        Lname : "Imran"
     } 
-    document.write(`${Name.fullname.call(person3)}`);
+    const Person2 = {
+        Fname : "Shoukat " ,
+        Lname : "Abbas"
+    }
+    const Person3 = {
+        Fname : "Wafadar " ,
+        Lname : "Ghazi"
+    }
+ document.write(`${Name.fullName.call(Person3)}`);
     </script>
 </body>
 </html>
