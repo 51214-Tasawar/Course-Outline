@@ -7,7 +7,25 @@
 </head>
 <body>
     <script>
-        
+        //  call, apply, bind methods are used to assign object to this keyword  
+       const Name = {
+      fullname : function(){
+        return this.fname + " " + lname ;
+      }
+       }
+    const person1 = {
+        fname : " Ahmad " ,
+        lname : " Raza " 
+    }
+    const person2 = {
+        fname : " Skhawat " ,
+        lname : " Ali " 
+    }
+    const person3 = {
+        fname : " Ali " ,
+        lname : " Maysa " 
+    } 
+    document.write(`${Name.fullname.call(person3)}`);
     </script>
 </body>
 </html>
