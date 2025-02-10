@@ -7,25 +7,44 @@
 </head>
 <body>
     <script>
-     // const student ={
-    //     name : "New Student",
-    //     age  : 20 ,
-    //     address : "Multan" ,
-    //     Section : 'A'  ,
-    //     class : "Semester 8 ",
-    //     Info : function(){
-    //  document.write(`Student Name : ${this.name}<br>Age is : ${this.age}<br>  Class and Section is :
-    //   ${this.class }-${this.Section}<br> Address Is  :${this.address}`)
+        // This keyword use to access object attributes
+    //   const bank ={
+    //     empName : " New Emp " ,
+    //     role : "Accountent Officer" ,
+    //     desination : "Manager",
+    //     info : function(){
+    //         document.write(`Employee Name is : ${this.empName}<br>Employee Role is :${this.role}<br>
+    //         Employee Desination is : ${this.desination}`)
     //     }
     //   }
-    //   student.Info();
-         function Student(name , age , address) {
-                  this.name = name ;
-                  this.age = age ;
-                  this.address = address ;
-                } 
-               const Student1 = new Student("Student-1" , 20 , "Muzaffargarh") ;
-               document.write(`Student Name  : ${Student1.name}`)
+    //   bank.info();
+
+//     function animals (name , color ,price){
+//         this.name = name ;
+//         this.color = color ;
+//         this.price = price ;
+//     }
+     
+//    const myAnimal = new animals("Cat" , "White" , 7000);
+//    document.write(`I have a ${myAnimal.name} <br> His Color is ${myAnimal.color}`)
+
+    // Arrow function cannot be bind this keyword 
+    // it can if it is used as callback function ()
+    const obj3 = {
+        name1 : "Farhat Abbas" ,
+        name2 : "Skhawat Ali" ,
+        name3 : "Muhammad Naqi" ,
+        name4 : "Mabo Khan" ,
+        name5 : "Ali Khan" ,
+       info : function(){
+        setTimeout(() => {
+            document.write(` Student Name is : ${this.name5}`)
+        }, 5000);
+       }
+    }
+
+    obj3.info();
+
     </script>
 </body>
 </html>
