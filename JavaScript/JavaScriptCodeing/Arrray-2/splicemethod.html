@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //
+        const vehicles = ["Audi" , "BMW" , "Range Rover" , "Land Cruiser" , "Lamborghini"];
+        const newVehicle = vehicles.splice(0 , 1 , "Elentra") //Modifying one element at index 0 ;
+        document.write(vehicles+"<br>");
+        const removed = vehicles.splice(2 , 1) // deleting one element from index 2 
+        document.write(vehicles+"<br>")
+        const addvehicle = vehicles.splice(2,0, "Range Rover")  // Adding new Element at index 2
+        document.write(vehicles)
+    </script>
+</body>
+</html>
