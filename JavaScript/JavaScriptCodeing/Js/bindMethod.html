@@ -21,6 +21,21 @@
         }
         const myinfo = info.bind(Emp , "Employee Name is : ","Employee Age is : " ,"Employee address is : ");
         myinfo();
+        document.write(`<br>`)
+        // const newObj = {
+        // }
+         const newObj = {
+            empName : " Shokat Abbas",
+            age     : 23 ,
+            address : {
+                city : "Muzaffargarh" ,
+                provinance : "Punjab",
+                country : "Pakistan"
+            }
+         }
+         const empinfo = function(name , age , address){
+            return `${name} ${this.name}<br> ${age} ${this.age}<br>`
+         }
     </script>
 </body>
 </html>
