@@ -33,9 +33,11 @@
                 country : "Pakistan"
             }
          }
-         const empinfo = function(name , age , address){
-            return `${name} ${this.name}<br> ${age} ${this.age}<br>`
+         const Info = function(name , age , addres){
+            return `${name} ${this.empName}<br> ${age} ${this.age}<br>${this.empName}${addres}${this.address.city}`
          }
+        const empinfo = Info.bind(newObj , "Employee Name is : " ,"Employee age is : " ,"is from : ");
+        document.write(empinfo());
     </script>
 </body>
 </html>
