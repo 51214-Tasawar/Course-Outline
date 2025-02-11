@@ -7,7 +7,9 @@
 </head>
 <body>
     <script>
-        //
+        //The splice() method is used to add, remove, or replace elements in an array. Unlike slice()
+        //the splice() method modifies the original array and returns an array of the removed elements.
+        // Syntax : array.splice(startIndex, deleteCount, item1, item2, ...);
         const vehicles = ["Audi" , "BMW" , "Range Rover" , "Land Cruiser" , "Lamborghini"];
         const newVehicle = vehicles.splice(0 , 1 , "Elentra") //Modifying one element at index 0 ;
         document.write(vehicles+"<br>");
