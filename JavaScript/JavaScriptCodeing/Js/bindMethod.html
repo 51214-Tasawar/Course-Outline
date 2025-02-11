@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const Emp = {
+            name : "Ali",
+            age : 12 ,
+            address : {
+                city : "Muzaffargarh" ,
+                provinance: "Punjab",
+                country: "Pakistan"
+            }
+        }
+        const info = function(a , b , c){
+           document.write(`${a} ${this.name} <br> ${b} ${this.age} <br>${c} ${this.address.city}`);
+        }
+        const myinfo = info.bind(Emp , "Employee Name is : ","Employee Age is : " ,"Employee address is : ");
+        myinfo();
+    </script>
+</body>
+</html>
