@@ -13,13 +13,22 @@
     //     return acc + val ;
     //  })
     //  document.write(newarr);
-  
-    const arr = [1,2,3,4,56,7,89,909,1100];
-    
-    const maxnum = arr.reduce((acc , num)=>{
-          return Math.max(acc , num );
-    })
-     document.write(maxnum);
+     
+    const arr = [12,14,57,909,33,1133,32576,0];
+
+    const maxNum = arr.reduce(maxnumber);
+    const minNum = arr.reduce(MinNumber);
+
+    document.write(`Max Num is : ${maxNum}<br>`);
+    document.write(`Min Num is : ${minNum}<br>`)
+   function maxnumber(acc , val){
+    return Math.max(acc , val)
+   }
+
+   function MinNumber(acc , val){
+    return Math.min(acc , val)
+   }
+
     </script>
 
 </body>
