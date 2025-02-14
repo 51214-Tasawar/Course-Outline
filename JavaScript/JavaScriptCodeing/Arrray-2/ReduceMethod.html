@@ -14,20 +14,29 @@
     //  })
     //  document.write(newarr);
      
-    const arr = [12,14,57,909,33,1133,32576,0];
+//    {
+//     const arr = [12,14,57,909,33,1133,32576,0];
 
-    const maxNum = arr.reduce(maxnumber);
-    const minNum = arr.reduce(MinNumber);
+// const maxNum = arr.reduce(maxnumber);
+// const minNum = arr.reduce(MinNumber);
 
-    document.write(`Max Num is : ${maxNum}<br>`);
-    document.write(`Min Num is : ${minNum}<br>`)
-   function maxnumber(acc , val){
-    return Math.max(acc , val)
-   }
+// document.write(`Max Num is : ${maxNum}<br>`);
+// document.write(`Min Num is : ${minNum}<br>`)
+// function maxnumber(acc , val){
+// return Math.max(acc , val)
+// }
 
-   function MinNumber(acc , val){
-    return Math.min(acc , val)
-   }
+// function MinNumber(acc , val){
+// return Math.min(acc , val)
+// }
+//    }
+//    const
+
+     const Newarr = [[1,3,5],[2,4,6],[7,9],8,10];
+     const fullarr = Newarr.reduce((pre , next)=>{
+                 return pre.concat(next);
+     })
+     document.write(fullarr);
 
     </script>
 
