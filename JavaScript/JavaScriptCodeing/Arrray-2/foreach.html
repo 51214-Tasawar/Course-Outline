@@ -4,22 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        .AB{
-             background-color:  red;
-             color: white;
-             width: 100px;
-             height: 100px;
-        }
-    </style>
 </head>
 <body>
     <script>
-        const arr = ["Ali" ,"Ahmad" , "Hassan" , "Muhammad" , "zain" , "<br>"];
-        arr.forEach((arr)=>{
-              return `<div class = AB>
-                ${document.write(arr)}
-                </div>`
+             //The .forEach() method is used to execute a function on each element of an array.
+             //t is commonly used for iterating over arrays without returning a new array.
+             //  ..currentValue → The current element being processed.
+             //index (optional) → The index of the current element.
+             //array (optional) → The array that .forEach() was called on.
+
+        // const arr = [1,2,3,4,5,6,7,8,9,10];
+        // let sum = 0 ;
+        // arr.forEach(val=>{
+        //     sum+=val ;
+        // });
+        // document.write(`Sum is : ${sum}`);
+        const arr =  [
+            {id : 101 , name :"Student1"},
+            {id : 102 , name :"Student2"},
+            {id : 103 , name :"Student3"},
+            {id : 104 , name :"Student4"},
+        ] ;
+        arr.forEach((newarr , index)=>{
+         document.write(`Index : ${index} -> Id  : ${newarr.id}  Name : ${newarr.name} <br>`)
         })
     </script>
 </body>
