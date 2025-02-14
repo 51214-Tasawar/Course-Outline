@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .AB {
+        background-color: red;
+        width: 200px;
+        height: 50px;
+        color: white;
+        border-radius: 10px;
+        row-gap: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      //The map() method in JavaScript is used to create a new array by applying a provided function to each
+      //element of the original array. It is a higher-order function that is commonly used for transforming data
+      //  in Array
+      //If the callback function does not return a value for an element, the new array will contain
+      // undefined for that elemen.
+
+
+      
+      // const arr = ["Student1" , "Student2" ,"Student2","Student3","Student4"];
+      // const Arr1= arr.map((arr)=>{
+      //       return `${arr} <br>`
+      // })
+      // document.write(Arr1);
+
+      const arr = [
+        { name: "Ali", age: 12 },
+        { name: "Skhawat", age: 20 },
+        { name: "Ahmad", age: 23 },
+        { name: "Shokat", age: 20 },
+        { name: "Farhat", age: 19 },
+      ];
+
+      const myArr = arr.map((Val) => {
+        {
+          Val.name === "Ali" ? (Val.age = Val.age + 5) : Val.age;
+        }
+        return `<div class = AB>
+                Name is : ${Val.name} has Age is : ${Val.age} <br>
+                </div>`;
+      });
+      document.write(myArr);
+    </script>
+  </body>
+</html>
