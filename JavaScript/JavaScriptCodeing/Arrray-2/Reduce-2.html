@@ -7,7 +7,23 @@
 </head>
 <body>
     <script>
-        
+    //   const arr = [ 
+    //     {name : "Student1" , age : 10},
+    //     {name : "Student2" , age : 20},
+    //     {name : "Student3" , age : 30},
+    //     {name : "Student4" , age : 40}
+    //   ];
+    //   const totalage = arr.reduce((acc , val)=>{
+    //           return acc + val.age ;
+    //   } , 0)
+    //   document.write(totalage);
+     const students = ["Muhammad" ,"Ali" , "Hassan" , "Muhammad" , "Ahmad" , "Waheed"];
+      const item = students.reduce((pre , next)=>{
+         pre[next] = (pre[next] || 0 ) +1;
+         return pre;
+      }, {});
+      document.write(JSON.stringify(item));
+
     </script>
 </body>
 </html>
