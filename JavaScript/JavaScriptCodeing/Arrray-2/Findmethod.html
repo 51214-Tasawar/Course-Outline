@@ -1,0 +1,30 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            //The .find() method is used to search for the first element in an array that meets a specified condition
+            // Unlike .filter(), which returns all matching elements, .find() returns only the first matching element
+            //Having Same Syntax As Filter Method .
+           const arr = [12,14,56,78,90];
+           const gnum = arr.find((num)=>{
+            return num < 50 ;
+           })
+           document.write(gnum);
+           const array = [
+            {name : "Ali" ,    age : 12},
+            {name : "Hassan" , age : 20},
+            {name : "Naqi" ,   age : 21},
+            {name : "Maysa" ,  age : 22}
+           ]
+           const eligible = array.find((student)=>{
+                return student.age > 18 ;
+           })
+           document.write(JSON.stringify(eligible));
+        </script>
+    </body>
+    </html>
