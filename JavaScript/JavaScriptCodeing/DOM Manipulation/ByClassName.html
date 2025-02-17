@@ -10,12 +10,8 @@
     <h4 class="e2">Heading Four for Text</h4>
     <h5 class="e3">Heading Five for text</h5>
     <script>
-        // Get the HTMLCollection of elements with class "e1"
         let h3 = document.getElementsByClassName("e1");
-
-        // Check if the collection has at least one element
         if (h3.length > 0) {
-            // Access the first element in the collection and write its text content
             document.write(h3[0].textContent);
         } else {
             document.write("No element with class 'e1' found.");
