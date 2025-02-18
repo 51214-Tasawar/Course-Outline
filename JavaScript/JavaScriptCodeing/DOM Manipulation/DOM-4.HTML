@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 <body>
-    <p class="pTag">Practice remaining</p>
-    <script>
-  let x = document.getElementsByClassName("pTag");
-   for(let i =0; i<x.length; i++){
-     x[i].textContent = " My Testing Purpose : "
-    //  document.write(x[i].textContent)
-   }
-    </script>
+  <p name="content"> paragraph Tag </p>
+  <h4 name="content">Heading Tag</h4>
+  <h4>This is New Content</h4>
+
+  <script>
+    let content = document.getElementsByName("content")   // Accessing Elemt by name
+    for(let i =0; i<content.length; i++){  
+      content[i].textContent ="Access Element Having Same Name not tag name ";
+      content[i].style.color ="white"
+      content[i].style.backgroundColor = "red"
+    }
+    let x = document.getElementsByTagName("h4"); // accessing element by Tag Name
+       for(let i =0 ; i<x.length; i++){
+        x[i].textContent ="Change Text using Tag name "
+        x[i].style.backgroundColor = "blue"
+        x[i].style.color = "yellow"
+       }
+  </script>
 </body>
 </html>

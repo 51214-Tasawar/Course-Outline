@@ -6,8 +6,24 @@
     <title>Document</title>
 </head>
 <body>
-    <p>Testing Demo</p>
+    <h5>Below is queryselectAll element</h5>
+    <p class="group1"> queryselectorAll Select all element by having the same class Name</p>
+    <p class="group1">queryselector Select one element </p>
+    <p class="group1">This is paragraph tag do more practice for this  </p>
+    <h5>Below is queryselect element</h5>
+    <p class="group2">Work work work and work</p>
+    <p class="group2"> practice practice practice and practice </p>
+    <p class="group2">code code code  and code </p>
     <script>
+        let G1 = document.querySelectorAll("p.group1"); // this select all p tag element having class name group1 ;
+        G1.forEach(g1=>{
+            g1.style.backgroundColor = "red";
+            g1.style.color = "white" ;
+            // g1.style.font-family 
+        })
+     let G2 = document.querySelector("p.group2") // this will select frist p tag element having class name group2 ;
+     G2.style.backgroundColor ="green"
+     G2.style.color = "white"
     </script>
 </body>
 </html>

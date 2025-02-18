@@ -10,11 +10,13 @@
  <p class="ptag">Paragraph Tag</p>
  <a href="https://www.w3schools.com/js/exercise.asp?x=xrcise_htmldom_elements2" class="atag">W3School</a>
  <script>
-    let htext = document.getElementsByClassName("htag");
+    let htext = document.getElementsByClassName("htag"); // accessing by Class Name return live html collection of object
     for(let i=0; i<htext.length; i++){
         htext[i].textContent = " I changed the Content inside the Heading Tag ";
+        htext[i].style.backgroundColor = "green";
+        htext[i].style.color = "white"
     }
-    let ptext = document.querySelector(".ptag")
+    let ptext = document.querySelector(".ptag") // return single object because of queryselector ;
     ptext.textContent = " Using Query i also Change the Paragraph tag Text ";
 
     let anchore = document.querySelector(".atag");
