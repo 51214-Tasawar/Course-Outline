@@ -6,9 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    <p>Practice remaining</p>
+    <p class="pTag">Practice remaining</p>
     <script>
-
+  let x = document.getElementsByClassName("pTag");
+   for(let i =0; i<x.length; i++){
+     x[i].textContent = " My Testing Purpose : "
+    //  document.write(x[i].textContent)
+   }
     </script>
 </body>
 </html>

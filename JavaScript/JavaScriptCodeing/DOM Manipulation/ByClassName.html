@@ -6,16 +6,23 @@
     <title>Document</title>
 </head>
 <body>
-    <h3 class="e1">Heading Three for text</h3>
-    <h4 class="e2">Heading Four for Text</h4>
-    <h5 class="e3">Heading Five for text</h5>
-    <script>
-        let h3 = document.getElementsByClassName("e1");
-        if (h3.length > 0) {
-            document.write(h3[0].textContent);
-        } else {
-            document.write("No element with class 'e1' found.");
-        }
-    </script>
+ <h3 class="htag">This is my Heading Tag</h3>
+ <p class="ptag">Paragraph Tag</p>
+ <a href="https://www.w3schools.com/js/exercise.asp?x=xrcise_htmldom_elements2" class="atag">W3School</a>
+ <script>
+    let htext = document.getElementsByClassName("htag");
+    for(let i=0; i<htext.length; i++){
+        htext[i].textContent = " I changed the Content inside the Heading Tag ";
+    }
+    let ptext = document.querySelector(".ptag")
+    ptext.textContent = " Using Query i also Change the Paragraph tag Text ";
+
+    let anchore = document.querySelector(".atag");
+    anchore.style.color = "white"
+    anchore.style.backgroundColor = "red";
+    // atag[i].style.color = "white";
+    // atag[i].style.backgroundColor ="red";
+
+ </script>
 </body>
 </html>
