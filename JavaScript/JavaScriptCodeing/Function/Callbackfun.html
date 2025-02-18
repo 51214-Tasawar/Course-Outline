@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Highorder(name , callback) {
+            document.write(`${name}`);
+            callback();
+        }
+        function callback(){
+            document.write(`Welcome to this  program`)
+        }
+        Highorder("Inshal Khan" , callback);
+    </script>
+</body>
+</html>
