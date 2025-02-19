@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .AGE{
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <b> Categorizing the Persons </b>
+    <p id="person"></p>
+    <script>
+        //A Promise in JavaScript represents a value that may be available now, in the future, or never
+        //It is used to handle asynchronous operations such as fetching data, reading files, making API calls, etc
+        //Why Use Promises
+        //Chaining: Promises allow you to chain multiple asynchronous operations sequentially.
+        //Error Handling: Promises have built-in error handling using .catch().
+        //Promise have pending ,fulfilled or rejected one of these three states
+          let age = parseInt(prompt("Enter Age :"))
+
+        let personAge = new Promise((res , rej)=>{  //You can create a Promise using the Promise constructor
+            //which takes a function (called the executor) with two parameters: resolve and reject.
+             if(age >= 18){
+              res("You can Vote");
+             }
+             else{
+                rej("You are Not eligible ");
+             }
+        })
+        personAge.then((message)=>{
+                document.getElementById("person").innerHTML = `<span class="AGE">${message}✅</span>`
+        }).catch((message)=>{
+            document.getElementById("person").innerHTML = `<span class="AGE">${message}✅</span>`
+        })
+    </script>
+</body>
+</html>
