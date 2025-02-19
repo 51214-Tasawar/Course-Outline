@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const fun1 = new Promise((resolve , reject)=>{
+            const grade = 50 ;
+            setTimeout(()=>{
+           if(grade){
+                resolve(`Your Grade is ${grade}`);
+           }
+           else{
+            reject(`Enter Valid Number`)
+           }
+            }, 2000)
+        });
+        const fun2 = new Promise((res , rej)=>{
+            const Semester = "8th" ;
+            setTimeout(()=>{
+                if(Semester){
+                res(`Student is Studing in Semester : ${Semester}`)
+            }
+            else{
+                rej(`Please Enter Valid Input`);
+            }
+            } , 2000)
+        })
+        fun1.then((result)=>{
+          document.write(result);
+          return fun2 ;
+        }).then((result2)=>{
+         document.write(result2)
+        }).catch((error)=>{
+            document.write(error);
+        })
+    </script>
+</body>
+</html>
