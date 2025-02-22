@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .users{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 15px;
+        }
+    .user-boxes{
+        width: 240px;
+        height: 290px;
+        background-color: lightgray;
+        color: red;
+        font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="users" id="users">
+    
+    </div>
+    <script>
+     async function Users(){
+        let response = await  fetch('https://jsonplaceholder.typicode.com/posts');
+        let users = await response.json();
+        document.getElementById("users").innerHTML = users.map(user=>
+            `<div class="user-boxes">
+                <p><strong>ID     : </strong>${user.id}</p>
+                <p><strong>userId : </strong>${user.userId}</p>
+                <p><strong>Title  : </strong>${user.title}</p>
+                <p><strong>Body   : </strong>${user.body}</p>
+            </div>`
+        ).join(" ")
+     }
+     Users()
+    </script>
+</body>
+</html>
