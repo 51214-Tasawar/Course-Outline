@@ -4,7 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
+    <style> .btn1{
+        background-color: lightskyblue;
+         color: white;
+    }
+    .btn2{
+        background-color: red;
+        
+    }
         .user-box{
             width: 230px;
             height: 270px;
@@ -36,6 +43,10 @@
             <p><strong> userId : </strong>${user.userId}</p>
             <p><strong> Title  : </strong>${user.title}</p>
             <p><strong> Body   : </strong>${user.body}</p>
+            <div class="Abtn">
+                <button onclick=updateUser(${user.userId}) class="btn">Update</button>
+                <button onclick=deleteUser(${user.userId}) class="btn">Delete</button>
+            </div>
         </div>`
         ).join(" ")
         ).catch((error)=>
