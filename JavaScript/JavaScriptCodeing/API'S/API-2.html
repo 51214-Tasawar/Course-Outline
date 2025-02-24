@@ -10,7 +10,7 @@
             color: white;
             font-family: 'Times New Roman', Times, serif;
             width: 230px;
-            height: 250px;
+            height: 270px;
             border-radius: 5px;
             padding: 5px;
         }
@@ -32,7 +32,7 @@
         .then(users=>
       document.getElementById("users").innerHTML = users.map(user=>
         `<div class="user-box"> 
-            <p><strong> ID      : </strong> ${user.Id}</p>
+            <p><strong> ID      : </strong> ${user.id}</p>
             <p><strong> userId  : </strong> ${user.userId}</p>
             <p><strong> Title   : </strong> ${user.title}</p>
             <p><strong> Body    : </strong> ${user.body}</p>
