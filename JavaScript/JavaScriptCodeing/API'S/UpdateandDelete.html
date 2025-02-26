@@ -3,180 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Posts with Update and Delete</title>
+    <title>Document</title>
     <style>
-        .user-box {
-            background-color: red;
-            color: white;
-            font-family: 'Times New Roman', Times, serif;
-            width: 230px;
-            height: 320px;
-            border-radius: 5px;
-            padding: 15px;
-            box-sizing: border-box;
-            margin: 10px;
-        }
-        .users {
-            display: flex;
-            flex-wrap: wrap;
-            padding: 15px;
-            gap: 20px;
-        }
-        .actions {
-            margin-top: 10px;
-        }
-        .actions button {
-            margin-right: 5px;
-            padding: 5px 10px;
-            cursor: pointer;
-        }
-
-        /* Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.5);
-            justify-content: center;
-            align-items: center;
-        }
-        .modal-content {
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-            width: 400px;
-        }
-        .modal-content h2 {
-            color: black;
-            margin-top: 0;
-        }
-        .modal-content label {
-            color: black;
-            display: block;
-            margin-bottom: 5px;
-        }
-        .modal-content input,
-        .modal-content textarea {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        .modal-actions {
-            text-align: right;
-        }
-        .modal-actions button {
-            margin-left: 10px;
-            padding: 8px 16px;
-        }
+     .users{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 5px;
+     }
+     .user-box{
+        width: 250px;
+        height: 290px;
+        background-color: red;
+        color: white;
+        border-radius: 15px;
+        padding: 10px;
+        font-family: 'Times New Roman', Times, serif;
+     }
+     .btn1{
+        background-color: rgb(10, 148, 194);
+        color: white;
+        width: 70px;
+        height: 25px;
+        border-radius: 20px; 
+     }
+     .btn2{
+        background-color: red;
+        color: white;
+        width: 70px;
+        height: 25px;
+        border-radius: 20px; 
+     }
     </style>
 </head>
 <body>
     <div class="users" id="users">
-        <!-- User posts will be dynamically inserted here -->
-    </div>
 
-    <!-- Update Modal -->
-    <div id="updateModal" class="modal">
-        <div class="modal-content">
-            <h2>Update Post</h2>
-            <label for="modalTitle">Title:</label>
-            <input type="text" id="modalTitle">
-            <label for="modalBody">Body:</label>
-            <textarea id="modalBody" rows="4"></textarea>
-            <div class="modal-actions">
-                <button onclick="saveChanges()">Save</button>
-                <button onclick="closeModal()">Cancel</button>
-            </div>
-        </div>
     </div>
-
     <script>
-        let currentPostId = null;
+     fetch('https://jsonplaceholder.typicode.com/posts')
+     .then(response=>response.json())
+     .then(user =>{
+        return `${document.getElementById("users").innerHTML = user.map(nuser=>
+        `<div class="user-box"> 
+            <p><strong> ID    : </strong>${nuser.id}</p>
+            <p><strong> usrId :</strong>${nuser.userId}</p>
+            <p><strong> Title :</strong>${nuser.title}</p>
+            <p><strong> Body  :</strong>${nuser.body}</p>
+            <button class="btn1" onclick="updateUser(${nuser.id})">Update</button>
+            <button class="btn2  onclick="deleteUser(${nuser.id})">Delete</button>
+        </div>`).join(" ")}`
+     })
 
-        // Fetch data from the API
-        fetch('https://jsonplaceholder.typicode.com/posts')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error("Network response was not ok");
-                }
-                return response.json();
-            })
-            .then(users => {
-                const usersContainer = document.getElementById("users");
-                usersContainer.innerHTML = users.map(user => `
-                    <div class="user-box" id="post-${user.id}"> 
-                        <p><strong>ID:</strong> ${user.id}</p>
-                        <p><strong>User ID:</strong> ${user.userId}</p>
-                        <p><strong>Title:</strong> ${user.title}</p>
-                        <p><strong>Body:</strong> ${user.body}</p>
-                        <div class="actions">
-                            <button onclick="updatePost(${user.id})">Update</button>
-                            <button onclick="deletePost(${user.id})">Delete</button>
-                        </div>
-                    </div>
-                `).join("");
-            })
-            .catch(error => {
-                const usersContainer = document.getElementById("users");
-                usersContainer.innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
-                console.error("Error:", error);
-            });
-
-        // Function to handle update
-        function updatePost(postId) {
-            currentPostId = postId;
-            const postElement = document.getElementById(`post-${postId}`);
-            const currentTitle = postElement.querySelector("p:nth-child(3)").textContent.replace('Title: ', '');
-            const currentBody = postElement.querySelector("p:nth-child(4)").textContent.replace('Body: ', '');
-
-            document.getElementById('modalTitle').value = currentTitle;
-            document.getElementById('modalBody').value = currentBody;
-            document.getElementById('updateModal').style.display = 'flex';
-        }
-
-        // Function to save changes
-        function saveChanges() {
-            const newTitle = document.getElementById('modalTitle').value;
-            const newBody = document.getElementById('modalBody').value;
-
-            if (newTitle && newBody) {
-                const postElement = document.getElementById(`post-${currentPostId}`);
-                postElement.querySelector("p:nth-child(3)").innerHTML = `<strong>Title:</strong> ${newTitle}`;
-                postElement.querySelector("p:nth-child(4)").innerHTML = `<strong>Body:</strong> ${newBody}`;
-                closeModal();
-            } else {
-                alert("Title and body cannot be empty!");
-            }
-        }
-
-        // Function to close modal
-        function closeModal() {
-            document.getElementById('updateModal').style.display = 'none';
-            currentPostId = null;
-        }
-
-        // Close modal when clicking outside
-        document.getElementById('updateModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeModal();
-            }
-        });
-
-        // Function to handle delete
-        function deletePost(postId) {
-            if (confirm("Are you sure you want to delete this post?")) {
-                const postElement = document.getElementById(`post-${postId}`);
-                if (postElement) {
-                    postElement.remove();
-                    alert("Post deleted successfully!");
-                }
-            }
-        }
+     function updateUser(postId){
+        const postElement = document.getElementById(`${postId}`);
+        const currentTitle = postElement.querySelector(`p:nth-child(3)`).textContent.replace('Title : ' , ' ')
+        const currentbody = postElement.querySelector(`p:nth-child(4)`).textContent.replace('Body : ' , ' ')
+     }
+     function deleteUser(){
+        
+     }
     </script>
 </body>
 </html>
