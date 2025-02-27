@@ -67,12 +67,17 @@
      })
 
      function updateUser(postId){
-        const postElement = document.getElementById(`${postId}`);
+        const postElement = document.getElementById(`post-${postId}`);
         const currentTitle = postElement.querySelector(`p:nth-child(3)`).textContent.replace('Title : ' , ' ')
         const currentbody = postElement.querySelector(`p:nth-child(4)`).textContent.replace('Body : ' , ' ')
+
       document.getElementById("Title").value =  currentTitle ;
       document.getElementById('Body').value = currentbody ;
       document.getElementById('model').style.display = 'flex'
+     }
+     function SaveChanges(){
+      const newTitle = document.getElementById('Title').value ;
+      const newBody = document.getElementById('Body').value ;
      }
    //   function deleteUser(){
         
