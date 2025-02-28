@@ -1,87 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-     .users{
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        padding: 5px;
-     }
-     .user-box{
-        width: 250px;
-        height: 290px;
-        background-color: red;
-        color: white;
-        border-radius: 15px;
-        padding: 10px;
-        font-family: 'Times New Roman', Times, serif;
-     }
-     .btn1{
-        background-color: rgb(10, 148, 194);
-        color: white;
-        width: 70px;
-        height: 25px;
-        border-radius: 20px; 
-     }
-     .btn2{
-        background-color: red;
-        color: white;
-        width: 70px;
-        height: 25px;
-        border-radius: 20px; 
-     }
-    </style>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+       
+      .Users{
+         display: flex;
+         flex-wrap: wrap;
+         gap: 10px;
+         padding: 10px;
+      }
+      .user-box{
+         width: 250px;
+         height: 290px;
+         background-color: lightgray;
+         color: red;
+         font-family: 'Times New Roman', Times, serif;
+       border-radius: 10px;
+      }
+      .btn1{
+         color: white;
+         background-color: blue;
+         width: 70px;
+         height: 20px;
+         border-radius: 5px;
+         font-family: 'Times New Roman', Times, serif;
+       }
+       .btn2{
+         color: white;
+         background-color: red;
+         width: 50px;
+         height: 20px;
+         border-radius: 5px;
+         font-family: 'Times New Roman', Times, serif;
+       } 
+       .Updatepost{
+         display: none;
+         position: fixed;
+         top: 0%;
+         bottom: 0%;
+         width: 270px;
+         height:250px;
+         border: 2px;
+         border-color: red;
+         border-radius: 5px;
+         justify-items: center;
+         align-items: center;
+       }
+   </style>
 </head>
 <body>
-    <div class="users" id="users">
-    </div>
-    <div class="model">
-         <div>
-         <label for="Title"> Title : </label>
-         <input type="text" id="Title">
-         <label for="Body" > Body : </label>
-          <input type="text" id="Body">
-         </div>
-         <div  class="actions">
-         <button class="save"> Save </button>
-         <button class="cancel"> Cancel </button>
-         </div>
-    </div>
-    <script>
-     fetch('https://jsonplaceholder.typicode.com/posts')
-     .then(response=>response.json())
-     .then(user =>{
-        return `${document.getElementById("users").innerHTML = user.map(nuser=>
-        `<div class="user-box"> 
-            <p><strong> ID    : </strong>${nuser.id}</p>
-            <p><strong> usrId :</strong>${nuser.userId}</p>
-            <p><strong> Title :</strong>${nuser.title}</p>
-            <p><strong> Body  :</strong>${nuser.body}</p>
-            <button class="btn1" onclick="updateUser(${nuser.id})">Update</button>
-            <button class="btn2" onclick="deleteUser(${nuser.id})">Delete</button>
-        </div>`).join(" ")}`
-     })
+   <div class="Users" id="users">
+   </div>
+   <div class="Updatepost" id="Updatepost" >
+      <div class="model-content">
+         <h2> Update Post </h2>
+         <label for="model-body"> BODY : </label>
+         <input type="text" id="model-body">
+        <label for="model-title">TITLE : </label>
+        <input type="text" id="model-Title">
+        <div class="p-actions">
+       <button onclick="savechanges()"> Save  </button>
+       <button onclick="closemodel()">  Cancle </button>
+        </div>
+      </div>
+   </div>
+   <script>
+       fetch('https://jsonplaceholder.typicode.com/posts')
+       .then(response=>response.json())
+       .then(Users=>
+         document.getElementById("users").innerHTML = Users.map((user)=>{
+          return  `<div class="user-box" id ="p-${user.id}">
+               <p><strong> USERID  : </strong> ${user.userId}</p>
+               <p><strong> ID  : </strong> ${user.id}</p>
+               <p><strong> BODY  : </strong> ${user.body}</p>
+               <p><strong> TITLE  : </strong> ${user.title}</p>
+               <div class="btns">
+                  <button class="btn1" onclick="UpdateUser(${user.id})">Update</button>
+                  <button class="btn2" onclick="DeleteUser(${user.id})">Delete</button>
+               </div>
+            </div>`
+         }).join(" ")
+       ).catch(error=>
+         `Getting Error While Fetching Data ${error} `
+       )
+       function UpdateUser(CpostId){
+         const currentElement = document.getElementById(`p-${CpostId}`);
+         const currentbody = currentElement.querySelector("p:nth-child(3)").textContent.replace('BODY :' ,  '')
+         const currenttitle = currentElement.querySelector("p:nth-child(4)").textContent.replace('TITLE :' ,  '')
+         document.getElementById("model-body").value = currentbody
+         document.getElementById("model-title").value = currenttitle 
+         document.getElementById("Updatepost").style.display = "flex"
+       }
 
-     function updateUser(postId){
-        const postElement = document.getElementById(`post-${postId}`);
-        const currentTitle = postElement.querySelector(`p:nth-child(3)`).textContent.replace('Title : ' , ' ')
-        const currentbody = postElement.querySelector(`p:nth-child(4)`).textContent.replace('Body : ' , ' ')
-
-      document.getElementById("Title").value =  currentTitle ;
-      document.getElementById('Body').value = currentbody ;
-      document.getElementById('model').style.display = 'flex'
-     }
-     function SaveChanges(){
-      const newTitle = document.getElementById('Title').value ;
-      const newBody = document.getElementById('Body').value ;
-     }
-   //   function deleteUser(){
-        
-   //   }
-    </script>
+       function savechanges(){
+         const cbody = document.getElementById("model-body").value ;
+         const ctitle = document.getElementById("model-title").value  ;
+          
+         if(cbody && ctitle){
+            const npostElement =  document.getElementById(`p-${CpostId}`) 
+            npostElement.querySelector("p:nth-child(3)").innerHTML = `<strong> BODY </strong> ${cbody} `
+            npostElement.querySelector("p:nth-child(4)").innerHTML = `<strong> TITLE </strong> ${ctitle}`
+            closemodel()
+         }
+         else{
+            alert(`Empty User box `)
+         }
+         function closemodel(){
+            document.getElementById("Updatepost").style.display = "none"
+            CpostId = null ;
+         }
+       }
+       document.getElementById("Updatepost").addEventListener('click' , function(e){
+          if(e.target === this){
+            closemodel(); 
+          }
+       }
+      )
+       function DeleteUser(CpostId){
+         alert("Are You Conforim To delete") ;
+         const delid = document.getElementById(`p-${CpostId}`)
+         if(delid){
+            delid.remove() ;
+            alert (" Deleted Successfully ")
+         }
+         else{
+            alert('Try Again');
+         }
+       }
+   </script>
 </body>
 </html>
