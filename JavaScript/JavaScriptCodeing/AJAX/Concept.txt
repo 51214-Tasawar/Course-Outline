@@ -1,0 +1,31 @@
+      /////////////////////  AJAX  ////////////////////////
+  AJAX: AJAX stands for Asynchronous JavaScript and XML. It is a technique used in web development to send
+  and receive data from a server asynchronously without reloading the entire webpage. This makes web
+  applications faster, more interactive, and responsive.
+
+  Why Do We Use AJAX : 
+   Before AJAX, websites used synchronous requests, meaning
+   Every time the user requested new data, the entire webpage had to reload
+   This was slow and inefficient, especially for dynamic websites like social media or dashboards.
+
+  With AJAX, we can: Fetch data in the background without reloading the page
+  Update specific parts of a webpage dynamically.
+  Improve user experience by making web applications faster.
+  Send data to the server without a full refresh.
+
+  How Does AJAX Work: 
+  AJAX works using the XMLHttpRequest (XHR) object or Fetch API to communicate with the server asynchronously.
+
+ AJAX Process: 
+ User Action: A user clicks a button or enters data on a webpage
+ JavaScript Creates a Request: The browser sends an asynchronous request to the server using JavaScript
+ Server Processes the Request: The server retrieves or updates data in the database.
+ Server Sends a Response: The server returns the requested data
+ JavaScript Updates the Webpage: Without refreshing, JavaScript updates only the required part of the page.
+
+  AJAXStates: 5
+ 0:Request Not Initilzed
+ 1:Server Connection Eastablished
+ 2:Request Received
+ 3:Processing Request
+ 4:request finshed and response is ready
