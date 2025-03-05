@@ -1,13 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+    <style>
+        .u-box{
+            width: 250px;
+            height: 270px;
+            background-color: red;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            border-radius: 10px;
+            padding: 10px;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="ubox">
+      <p>You can the User by Click the Below Button</p>
+    </div>
+    <button onclick="User()">Click Here</button>
     <script>
-        let Xm = new XMLHttpRequest();
+      function User() {
+        const info = new XMLHttpRequest();
+        info.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            let user = JSON.parse(this.responseText);
+            document.getElementById("ubox").innerHTML = `   
+         <div class="u-box">
+         <p><strong>ID     : </strong>${user.id}</p>
+         <p><strong>USERID : </strong>${user.userId}</p>
+         <p><strong>TITLE  : </strong>${user.title}</p>
+         <p><strong>BODY   : </strong>${user.body}</p>
+         </div>`;
+          } }
+          info.open('GET','https://jsonplaceholder.typicode.com/posts/1',true)
+          info.send()
+      }
     </script>
-</body>
+  </body>
 </html>
