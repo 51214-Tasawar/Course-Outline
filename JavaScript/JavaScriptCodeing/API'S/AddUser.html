@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="AddUser.css">
+</head>
+<body>
+    <div class="div-1" id="div-1">
+        <h3>Add new User</h3>
+        <div class="userId">
+       <label for="userId"> userId :</label>
+       <input type="text" id="userId">
+        </div>
+        <div>
+            <label for="title"> Title :</label>
+            <input type="text" id="title">
+        </div>
+        <div>
+            <label for="body">Body</label>
+            <input type="text" id="body">
+        </div>
+        <div class="a-btns">
+         <button onclick="Submit()" class="a-btn1">Submit</button>
+         <button onclick="closemodel()" class="a-btn2">Cancel</button>
+        </div>
+    </div>
+    <div class="div-2" id="div-2" >
+        <p>Add User</p>
+        <button onclick="showmodel()" class="new-btn">+</button>
+    </div>
+    <div id="div-3">
+   
+    </div>
+    <script>
+      function showmodel(){
+        document.getElementById("div-1").style.display = 'flex'
+      }
+      function Submit(){
+        const newTitle = document.getElementById("title").value 
+        const newuserId = document.getElementById("userId").value 
+        const newbody  = document.getElementById("body").value
+        if(!newuserId || !newTitle || !newbody){
+            alert('All Fields Should be Filled out')
+        }
+        fetch('https://jsonplaceholder.typicode.com/posts' , {
+            method : 'POST' ,
+            body : JSON.stringify({
+                userId :newuserId ,
+                title : newTitle ,
+                body : newbody 
+            }) ,
+            headers : {
+                'Content-Type' : 'Application/json; charset=UTF-8'
+            }
+        })
+        .then(res=>res.json())
+        .then(data=> {
+            document.getElementById("div-3").innerHTML = `
+            <div>
+                <p><strong>ID     : </strong>${data.id}</p>
+                <p><strong>USERID : </strong>${data.userId}</p>
+                <p><strong>TITLE  : </strong>${data.title}</p>
+                <p><strong>body   : </strong>${data.body}</p>
+            </div>
+            `
+        }
+        )
+        closemodel()
+        alert('User Added Successfully')
+      }
+      
+     function closemodel(){
+        document.getElementById("div-1").style.display = "none"
+        document.getElementById("userId").value = ' ' 
+        document.getElementById("body").value = ' '
+        document.getElementById("title").value = ' '
+     }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+.div-1{
+    display: none;
+    position: fixed;
+    top: 35%;
+    left: 35%;
+    width: 300px;
+    height: 350px;
+    background-color: lightgreen;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    align-content: center;
+}
+.a-btn1 , .a-btn2 {
+    width:max-content;
+    height: max-content;
+    padding: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 200;
+    border-radius: 7px;
+}
+.a-btn1{
+    background-color: blue;
+    color: white;
+}
+.a-btn2{
+    background-color: red;
+    color: white;
+}
+.new-btn{
+    width: 100px;
+    height: 80px;
+    font-size: large;
+    font-weight: 800;
+    padding: 8px;
+    width: max-content;
+    height: max-content;
+    background-color: blue;
+    border-radius: 10px;
+}
+.div-3{
+    width: 200px;
+    height: 400px;
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+}
+.a-btn1,.a-btn2,.new-btn{
+cursor: pointer;
+}

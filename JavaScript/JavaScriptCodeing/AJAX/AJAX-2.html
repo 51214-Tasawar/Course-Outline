@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .U-box{
+     background-color: red;
+     color: white;
+     width: 250px;
+     height: 290px;
+     font-family: 'Times New Roman', Times, serif;
+     border-radius: 10px;
+     padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="ubox">
+        <p>User will Show Here</p>
+    </div>
+    <button onclick="JSONDATA()"> Click Here </button>
+    <script>
+    function JSONDATA(){
+        let Users = new XMLHttpRequest();
+        Users.onreadystatechange =  function(){
+            if(this.readyState == 4 && this.status == 200){
+                let user = JSON.parse(this.responseText)
+                document.getElementById("ubox").innerHTML = 
+                `<div class="U-box">
+                   <p><strong>ID     : </strong>${user.id}</p> 
+                   <p><strong>userId : </strong>${user.userId}</p> 
+                   <p><strong>Title  : </strong>${user.title}</p> 
+                   <p><strong>Body   : </strong>${user.body}</p> 
+                </div>`
+            }
+        }
+        Users.open('GET' , 'https://jsonplaceholder.typicode.com/posts/1' , true)
+        Users.send()
+    }
+    </script>
+</body>
+</html>
