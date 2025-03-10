@@ -1,0 +1,22 @@
+.User-box{
+    position: fixed;
+    top: 35%;
+    left: 35%;
+    width: 200px;
+    height: max-content;
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+
+}
+.up-button{
+    width: max-content;
+    height: max-content;
+    padding: 5px;
+    background-color: red   ;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    cursor: pointer;
+}
