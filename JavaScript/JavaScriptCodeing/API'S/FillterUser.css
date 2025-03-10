@@ -1,0 +1,16 @@
+.user{
+    width: 250px;
+    height: 370px;
+    background-color: green;
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    font-weight: 200;
+    padding: 10px;
+    border-radius: 10px;
+}
+.u-boxes{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px  ;
+}
