@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Await-1.css">
+</head>
+<body>
+    <div class="Users" id="User">
+    
+    </div>
+    <script>
+        async function User(){
+            try{
+             let response = await fetch('https://jsonplaceholder.typicode.com/posts?userId=1')
+             let data = await response.json()
+              document.getElementById("User").innerHTML = data.map((user)=>{
+                return `<div id="u-box">
+                       <p><strong>ID</strong>${user.id}</p>
+                       <p><strong>USERID</strong>${user.userId}</p>
+                       <p><strong>TITLE</strong>${user.title}</p>
+                       <p><strong>BODY</strong>${user.body}</p>
+                    </div>`
+              }).join("")
+            }catch(error){
+              document.write(`Gettinh Error ${error} While Fetching Data`)
+            }
+        }
+      User()
+    </script>
+</body>
+</html>

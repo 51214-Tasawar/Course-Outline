@@ -1,0 +1,15 @@
+.Users{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0%;
+}
+
+#u-box{
+    background-color: green;
+    color: red;
+    width: 250px;
+    height: 300px;
+    padding: 10px;
+    border-radius: 10px;
+}
