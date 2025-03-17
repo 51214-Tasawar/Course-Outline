@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Map Example</title>
+    <style>
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <img src="image-2/Whole.jpg" width="400px" height="300px" usemap="#idimage">
+        <map name="idimage">
+            <area shape="rect" coords="0,0,170,200" alt="Laptop" href="image-2/laptop.jpg"> 
+            <area shape="rect" coords="180,50,350,250" alt="Phone" href="image-2/phone.jpg">
+            <area shape="rect" coords="250,200,0,100" alt="notebook" href="image-2.html/notebook.jpg">
+        </map>
+    </div>
+</body>
+</html>
