@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .perInfo {
+        font-family: "Times New Roman", Times, serif;
+      }
+      .form {
+        display: flex;
+        width: max-content;
+        height: max-content;
+        border-color: red;
+        border: 2px;
+        border-radius: 5px;
+        
+      }
+      #outerbox-1 {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+      }
+      #outerbox1-2{
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="form">
+      <div id="outerbox-1">
+        <div id="outerbox1-1">
+          <h4 class="perInfo">Prsonal Info :</h4>
+        
+            <div style="display: flex; flex-direction: column">
+              <label for="name">Name:</label>
+              <input type="text" placeholder="name" />
+            </div>
+            <div style="display: flex; flex-direction: column">
+              <label for="name">Father Name:</label>
+              <input type="text" placeholder="f-name" />
+            </div>
+            <div style="display: flex; flex-direction: column">
+              <label for="name">Country:</label>
+              <input type="text" placeholder="country" />
+            </div>
+            <div style="display: flex; flex-direction: column">
+              <label for="name">State:</label>
+              <input type="text" placeholder="state" />
+            </div>
+            <div style="display: flex; flex-direction: column">
+              <label for="name">City:</label>
+              <input type="text" placeholder="city" />
+            </div>
+          
+        </div>
+        <div id="outerbox1-2" >
+        <h4 class="perInfo">Official Info</h4>
+        <div style="display: flex; flex-direction: column">
+          <label for="dept">Dept : </label>
+          <input type="text" placeholder="enter Dept" />
+        </div>
+        <div style="display: flex; flex-direction: column">
+          <label for="dept">Role : </label>
+          <input type="text" placeholder="enter role" />
+        </div>
+        <div style="display: flex; flex-direction: column">
+          <label for="dept">Desination : </label>
+          <input type="text" placeholder="enter desination" />
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
