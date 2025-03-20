@@ -34,7 +34,8 @@
             <input type="text" id="input-1">
          </div>
          </div>
-         <div class="p-1">
+         <div class="p-1" style="gap: 10px;">
+            <label for="Provinance"> choose for Provinance </label>
             <select style="width: 200px;">
                 <option>Blouchistan</option>
                 <option>KPK</option>
@@ -42,7 +43,60 @@
                 <option>Punjab</option>
                 <option>Azad Kashmir</option>
             </select>
-            <
+            
+         </div>
+         <div class="p-2" style="display: flex; flex-wrap: wrap; gap: 10px; ">
+            <div style="display: flex;  flex-direction: column;">
+                <label for="div">Division : </label>
+                <input type="text" id="divi" placeholder="enter Division">
+            </div>
+            <div style="display: flex; flex-direction: column;">
+                <label for="District">Distric : </label>
+                <input type="text" id="dis" placeholder="enter district">
+            </div>
+            <div>
+                <label for="City">City : </label>
+                <input type="text" id="city" placeholder="enter City">
+            </div>
+         </div>
+         <div>
+            <h3>Click </h3>
+            <div style="display: flex; flex-direction: row;">
+                <input type="checkbox" id="HTML">
+                <label for="html">HTML</label>
+            </div>
+            <div style="display: flex; flex-direction: row;">
+            <input type="checkbox" id="CSS">
+            <label for="css">CSS</label>
+            </div>
+            <div style="display: flex; flex-direction: row;">
+                <input type="checkbox" id="javascript">
+                <label for="js">JavaScript</label>
+            </div>
+            <div style="display: flex; flex-direction: row;">
+                <input type="checkbox" id="javascript">
+                <label for="js">React Js</label>
+            </div>
+            <div style="display: flex; flex-direction: row;">
+                <input type="checkbox" id="javascript">
+                <label for="js">Postgres sql</label>
+            </div>
+            <div>
+                <p style="font-family: 'Times New Roman', Times, serif; 
+                font-weight: 500; ">Do You Want to Apply</p>
+                <label>
+                    <input type="radio" name="click" value="green" checked>Yes
+                </label>
+                <label>
+                    <input type="radio"  name="click" value="red">No
+                </label>
+            </div>
+            <div>
+             <button type="reset" style="background-color: red; 
+              border-radius: 3px; "> Reset </button>
+             <button type="submit" style="background-color: blue;
+              border-radius: 3px;"> Submit</button>
+            </div>
          </div>
     </form>
 </body>
