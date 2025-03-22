@@ -1,0 +1,17 @@
+#p-text{
+    background-color: pink;
+    color: green;
+    
+}
+*{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    font-weight: 500;
+}
+body{
+    background-image: url("coffee.jpg");
+    background-repeat:repeat-x; 
+    background-position: right left;
+    background-attachment: fixed;
+}
+
