@@ -1,0 +1,22 @@
+h3{
+    background-color: lightgoldenrodyellow;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    padding: 10px;
+}
+.ptag{
+    background-color: lightgreen;
+    font-family: 'Times New Roman', Times, serif;
+    color: red;
+    padding: 10px;
+}
+#ptag{
+    background-color: lightseagreen;
+    color: brown;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 10px;
+} 
+*{
+    justify-content: center;
+    text-align: center;
+}
