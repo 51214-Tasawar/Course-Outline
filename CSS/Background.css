@@ -17,3 +17,8 @@ p.c2{
     font-size: larger;
     font-weight: 200;
 }
+p.c3{
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    color: blue
+}
