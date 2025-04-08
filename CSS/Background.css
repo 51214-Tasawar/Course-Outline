@@ -1,0 +1,19 @@
+div{
+    width: 1000px;
+    height: 600px;
+    background-image: url(https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRVUMiDNRlyXhZfn9drALjOKft73I0Rjwmt0KKyFUA0LUB6XWBfefl4O0IpclTOQQl6YtsxsiWnUqegUk9a1Vu7gC4Whkp6hA6DB8kgVg);
+    border-radius: 5px;
+    border-color: red solid 2px;
+    background-repeat: repeat-x;
+    opacity: .5;
+}
+p.c1{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    font-size: larger;
+}
+p.c2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    font-weight: 200;
+}
