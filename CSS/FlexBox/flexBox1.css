@@ -1,0 +1,19 @@
+.outerBox {
+    width: 100%;
+    height: 350px;
+    background-color: blue;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+.outerBox > div {
+    width: 110px;
+    height: 70px;
+    align-content: center;
+    background-color: darkgray;
+    border-radius: 5px;
+    font-weight: 300;
+    font-size: larger;
+    text-align: center;
+}
