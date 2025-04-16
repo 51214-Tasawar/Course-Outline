@@ -1,0 +1,15 @@
+.outerBox {
+    background-color: blue;
+    display: flex;
+}
+.outerBox > div {
+    width: 70px;
+    height: 60px;
+    text-align: center;
+    align-content: center;
+    font-weight: 500;
+    font-size: larger;
+    background-color: azure;
+    border-radius: 5px;
+    margin: 10px;
+}
