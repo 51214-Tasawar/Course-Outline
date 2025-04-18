@@ -1,0 +1,35 @@
+@keyframes newAnimation {
+  0% {
+    background-color: red;
+  }
+  20% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: blue;
+  }
+  100% {
+    background-color: green;
+  }
+}
+.IstBox {
+  display: flex;
+  flex-flow: wrap;
+  width: 400px;
+  height: 350px;
+  position: static;
+  align-content: flex-start;
+  animation-name: newAnimation;
+  animation-duration: 6s;
+  animation-delay: 2s;
+  animation-iteration-count: 5;
+}
+.IstBox > div {
+  width: 70px;
+  height: 60px;
+  text-align: center;
+  background-color: darkgray;
+  margin: 10px;
+  border-radius: 5px;
+  align-content: center;
+}
