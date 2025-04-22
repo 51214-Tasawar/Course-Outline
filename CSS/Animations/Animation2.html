@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes AnimationBoxes {
+          0%{background-color: green; top: 0px; left: 0px;}
+          100% {background-color: red; top: 0px; left: 400px;}
+        }
+      
+    .MyBoxes > div {
+            text-align: center;
+            line-height: 80px;
+            color: white;
+            width: 100px;
+            height: 80px;
+            animation-name: AnimationBoxes;
+            animation-duration: 5s;
+            position: relative;
+        }
+   #item1{
+
+  animation-timing-function: linear;
+  animation-fill-mode: backwards;
+
+   }
+   #item2{
+  animation-timing-function: ease;  
+  animation-fill-mode: backwards;
+
+}
+#item3{
+    animation-timing-function: ease-in;
+    animation-fill-mode: backwards;
+}
+#item4{
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+}
+#item5{
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: backwards;
+}
+    </style>
+</head>
+<body>
+    <div class="MyBoxes">
+        <div id="item1" > linear Box </div>
+        <div id="item2" > Ease Box </div>
+        <div id="item3" > Ease-in Box </div>
+        <div id="item4" > Ease-out Box </div>
+        <div id="item5" > Ease-in-Out Box </div>
+    </div>
+</body>
+</html>

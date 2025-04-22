@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes movingbox{
+            0% {background-color: green; top: 0px; left: 0px;}
+            25%{background-color: blue; top:0px; left: 250px;}
+            50% {background-color: yellow; top: 250px; left: 250px;}
+            75% {background-color: brown;  top: 250px; left: 0px;}
+            100%{background-color: red; top: 0px; left: 0px;}
+        }
+        .divBox{
+            width: 90px;
+            height: 70px;
+            animation-name: movingbox;
+            position: relative;
+            animation-delay: 10s;
+            animation-duration: 10s;
+            animation-direction: alternate-reverse;
+            animation-iteration-count: infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="divBox">
+        
+    </div>
+</body>
+</html>
