@@ -5,25 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .box1,.box2,.box3{
-            width: 90px;
-            height: 70px;
-            background-color: red;
-            margin-bottom: 20px;
+        .box1 ,.box2 , .box3 {
+            width: 80px;
+            height: 60px;
+            background-color: blue;
             transition: width 2s , height 5s , transform 5s;
-            transition-duration: 5s;
+            transition-duration: 8s;
+            margin-bottom: 20px;
         }
         .box1:hover{
+            background-color: green;
             width: 500px;
-        } 
+            transition-timing-function: ease;
+        }
         .box2:hover{
-            width: 200px;
-            height: 290px;
+            background-color: aqua;
+            width: 300px;
+            height: 350px;
         }
         .box3:hover{
+            background-color: red;
+            height: 250px;
             width: 200px;
-            height: 200px;
-            transform: rotateX('angle');
+            transform: rotate(180deg);
         }
     </style>
 </head>
