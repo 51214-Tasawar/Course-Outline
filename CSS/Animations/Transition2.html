@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1,.box2,.box3{
+            width: 90px;
+            height: 70px;
+            background-color: red;
+            margin-bottom: 20px;
+            transition: width 2s , height 5s , transform 5s;
+            transition-duration: 5s;
+        }
+        .box1:hover{
+            width: 500px;
+        } 
+        .box2:hover{
+            width: 200px;
+            height: 290px;
+        }
+        .box3:hover{
+            width: 200px;
+            height: 200px;
+            transform: rotate(90deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+</html>
