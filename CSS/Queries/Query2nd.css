@@ -1,0 +1,40 @@
+body {
+    background-color: lightcyan;  
+    display: flex ;
+    justify-content:center ;
+}
+.divBoxes {
+    background-color: aquamarine ;
+    height: 550px;
+    width: 500px;
+   display: flex;
+   flex-flow: wrap row;
+   justify-content: flex-start;
+   align-content: flex-start;
+}
+.divBoxes > div {
+    width: 90px;
+    height: 70px;
+    text-align: center;
+    align-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    font-weight: 500;
+    background-color: white;
+    color: black;
+    margin: 20px;
+    border-radius: 8px;
+}
+@media only screen and (max-width : 450px){
+    .divBoxes{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+}
+
+@media  (max-width:200px){
+    .divBoxes{
+        display: grid;
+        grid-template-columns: auto ;
+    }
+}
