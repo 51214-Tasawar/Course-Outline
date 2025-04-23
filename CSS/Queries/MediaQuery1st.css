@@ -1,0 +1,51 @@
+
+body {
+   text-align: center;
+   align-content: center;
+}
+.outerBox{
+    width: 400px;
+    height: 600px;
+    background-color: aqua;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    align-content: flex-start;
+    flex-wrap: wrap;
+
+}
+.outerBox > div {
+    text-align: center;
+    align-content: center;
+   width: 80px;
+   margin: 10px;
+   border-radius: 5px;
+   height: 60px;
+   background-color: darkgray;
+   color: black;
+   font-weight: 400;
+   font-family: 'Times New Roman', Times, serif;
+   font-size: larger;
+}
+@media only screen and (max-width : 400px){
+    .outerBox{
+       display: grid;
+       grid-template-columns: auto auto ;
+       
+        background-color: greenyellow;
+    }
+}
+@media only screen and (max-width : 200px){
+    .outerBox{
+       display: grid;
+       grid-template-columns: auto  ;
+        background-color: red;
+    }
+}
+@media only screen and (max-width : 100px){
+    .outerBox{
+       display: flex;
+       flex-flow: wrap row;
+        background-color: rgb(226, 77, 77);
+    }
+}
