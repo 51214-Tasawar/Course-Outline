@@ -1,0 +1,16 @@
+.outerbox{
+width: 100%;
+}
+.box1{
+width: 100%;
+height: 50px;
+display: flex;
+align-items: center;
+background-color: blue;
+color: white;
+}
+.box2{
+display: flex;
+direction: row;
+flex-wrap: wrap;
+}
