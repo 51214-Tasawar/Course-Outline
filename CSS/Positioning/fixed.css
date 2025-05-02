@@ -9,6 +9,10 @@ align-items: center;
 background-color: blue;
 color: white;
 }
+.box1 > a {
+    color: white;
+    
+}
 .box2{
 display: flex;
 direction: row;
