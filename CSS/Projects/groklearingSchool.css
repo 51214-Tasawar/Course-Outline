@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 .box1 {
-    top: 0;
+  top: 0;
   display: flex;
   flex-flow: row nowrap;
   position: fixed;
@@ -32,11 +32,11 @@ a {
   background-color: inherit;
   text-decoration: none;
 }
-.box12{
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    align-items: center;
+.box12 {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
 }
 a:hover {
   background-color: rgb(2, 2, 105);
@@ -56,64 +56,103 @@ select {
   flex-wrap: nowrap;
 }
 
-.box2{
-    margin-top: 70px;
-    background-color: rgb(230, 243, 247);
-    display: flex;
-    flex-flow: row nowrap;
-    height: 470px;
-    justify-content: center;
-    align-content: center;
+.box2 {
+  margin-top: 70px;
+  background-color: rgb(230, 243, 247);
+  display: flex;
+  flex-flow: row nowrap;
+  height: 470px;
+  justify-content: center;
+  align-content: center;
 }
-#text1{
+#text1 {
   font-size: 28px;
   font-weight: bold;
-   margin-top: 30px;
-   margin-left: 10px;
-   flex-wrap: wrap;
+  margin-top: 30px;
+  margin-left: 10px;
+  flex-wrap: wrap;
 }
-#buttons{
- display: flex;
- flex-flow: column wrap;
- justify-content: center;
- align-content: center;
- margin-top: 90px;
- gap: 20px;
+#buttons {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-content: center;
+  margin-top: 90px;
+  gap: 20px;
 }
-#button1 , #button2{
+#button1,
+#button2 {
   font-size: larger;
   font-weight: 900;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   width: 190px;
   height: 35px;
 }
-#button1{
+#button1 {
   background-color: rgb(103, 236, 103);
   color: black;
   border: none;
 }
-#button1:hover{
-background-color: rgb(63, 216, 63);
+#button1:hover {
+  background-color: rgb(63, 216, 63);
 }
-#button2{
+#button2 {
   background-color: aliceblue;
   color: rgb(86, 86, 243);
   border: none;
 }
-#button2:hover{
+#button2:hover {
   background-color: rgb(85, 85, 199);
   color: white;
 }
-.box3{
+.box3 {
   display: flex;
   justify-content: center;
+  align-items: center;
   align-content: center;
   width: 100%;
   height: 300px;
 }
-#box3{
+#box3 {
   padding: 10px;
   height: 200px;
   background-color: rgb(46, 46, 233);
   padding: 5px;
 }
+#box32 {
+  padding: 10px;
+  height: 200px;
+  background-color: rgb(46, 46, 233);
+}
+#box32 > button {
+  background-color: greenyellow;
+  color: white;
+  font-weight: 300;
+  font-size: large;
+  padding: 10px;
+  border-radius: 5px;
+}
+#box32 > button > :hover {
+  background-color: green;
+  font-size: larger;
+}
+.box4 {
+  display: flex;
+  height: 520px;
+  background-color: rgb(230, 225, 225);
+  justify-content: center;
+  padding: 30px;
+  flex-wrap: wrap;
+}
+#text1 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: large;
+  font-weight: 400;
+}
+.box42 {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  margin-top: 40px;
+}
+
