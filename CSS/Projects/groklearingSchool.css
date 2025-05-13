@@ -183,8 +183,18 @@ select {
 }
 .box6{
   display: flex;
-  height: 600px;
+  flex-flow: column;
   background-color: white;
+  height: 650px;
+  align-items: center;
+  align-content: space-around;
+  padding: 50px;
+}
+.box7{
+  display: flex;
+  background-color: bisque;
+  height: 300px;
   justify-content: center;
-  padding: 70px;
+  align-items: center;
+  padding: 90px;
 }
