@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #outerBox{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        #userbox{
+            width: 250px;
+            height: 300px;
+            font-family: 'Times New Roman', Times, serif;
+            color: red;
+            background-color: lightgray;
+            border-radius: 10px;
+            /* padding: 10px; */
+        }
+    </style>
+</head>
+<body>
+    <div id="outerBox">
+
+    </div>
+    <script>
+    fetch('https://jsonplaceholder.typicode.com/posts/1/comments')
+    .then(data=>data.json())
+    .then(users=>
+        document.getElementById("outerBox").innerHTML = users.map(user=>
+            `
+           <div id="userbox">
+            <p><strong>id : </strong>${user.id}</p>
+            <p><strong>userId : </strong>${user.postId}</p>
+            <p><strong>Title : </strong>${user.email}</p>
+            <p><strong>Title : </strong>${user.name}</p>
+            <p><strong>Body : </strong>${user.body}</p>
+            </div>
+            `
+        ) .join('')
+    )
+    </script>
+</body>
+</html>

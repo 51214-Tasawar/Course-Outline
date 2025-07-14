@@ -43,6 +43,7 @@
         const newbody  = document.getElementById("body").value
         if(!newuserId || !newTitle || !newbody){
             alert('All Fields Should be Filled out')
+            closemodel()
         }
         fetch('https://jsonplaceholder.typicode.com/posts' , {
             method : 'POST' ,
