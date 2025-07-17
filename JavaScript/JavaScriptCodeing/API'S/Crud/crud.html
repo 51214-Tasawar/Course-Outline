@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="crud.css">
+</head>
+<body>
+   <a href="AllUser"> AllUser</a>
+   <div class="model" id="model">
+    <h4>Edit Info</h4>
+    <div>
+        <input type="text" id="title" placeholder="Title">
+        <textarea rows="5" id="body" placeholder="Body"></textarea>
+        <div class="model-btn">
+            <button class="save" onclick="Save()">Save</button>
+            <button class="cancel" onclick="cancel()">Cancel</button>
+        </div>
+    </div>
+   </div>
+   <div id="outerbox"> 
+   </div>
+    <script src="crud.js">
+    </script>
+</body>
+</html>
