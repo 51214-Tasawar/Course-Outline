@@ -46,4 +46,25 @@
 }
 .save{background-color: blue ; color: white; cursor: pointer;}
 .cancel{background-color: red; color: white; cursor: pointer;}
- 
+
+ #newUser{
+  display: flex;
+  width: 300px;
+  height: 350px;
+  background-color: white;
+  color: black;
+  font-family: 'Times New Roman', Times, serif;
+  border: 5px;
+  border-color: black;
+  border-radius: 10px;  
+  justify-content: center;
+  align-items: center;
+ }
+ #AUser{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    color: black;
+    gap: 10px;
+ }

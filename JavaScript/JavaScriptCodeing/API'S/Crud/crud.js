@@ -43,3 +43,49 @@
       function cancel(){
         document.getElementById("model").style.display = 'none'
       }
+      
+      const newuser = document.getElementById("AUser") ;
+      newuser.addEventListener("submit" , (ev)=>{
+      ev.preventDefault() ;
+     const userId = document.getElementById("newUserId").value
+     const title = document.getElementById("newUserTitle").value
+     const body = document.getElementById("newUserBody").value
+     if(!userId || !title || !body ){
+      alert ("Please fill all Ententies !")
+      return
+     }
+       fetch('https://jsonplaceholder.typicode.com/posts' , {
+         method : 'POST', 
+         body :JSON.stringify( {
+            userId : userId ,
+            title : title ,
+            body  : body
+         }) ,
+         headers : {
+            'Content-type' : 'application/json; charset=UTF-8'
+         }
+       })
+         .then(data=>data.json())
+         .then(newUser=>{
+            const outerbox = document.getElementById("outerbox") ;
+            const box = document.createElement("div") ;
+            box.className ="innerbox" ;
+            box.setAttribute("p-id" , newUser.id || userId)
+            box.innerHTML = 
+            `
+          <p><strong>Id      :  </strong> <span>${newUser.id || userId}</span></p>
+          <p><strong>userId  :  </strong> <span>${newUser.userId}</span></p>
+          <p><strong> Title  :  </strong><span class="title-content">${newUser.title}</span></p>
+          <p><strong>Body    :  </strong> <span class="body-content">${newUser.body}</span></p>
+          <div class="box-btn">
+          <button onclick="Update(this)" class="Update">Update</button>
+          <button onclick="Delete(this)" class="Delete"> Delete</button>
+          </div>
+            `
+            outerbox.appendChild(box);
+            newuser.reset();
+         })
+         .catch((error)=>{
+          console.log(`getting Error  ${error}`)
+         })
+      })
